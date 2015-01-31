@@ -1,0 +1,320 @@
+.sl-mark {
+    border-color: #444;
+    border: 0.15em solid rgba(black, 0.7);
+    padding: 0.9em;
+    display: inline-block;
+    border-radius: 50%;
+
+    div {
+        width: 1.3em;
+        height: 1.3em;
+        background-color: #444;
+        background-color: rgba(black, 0.7);
+        border-radius: 50%;
+        -webkit-transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease;
+    }
+}
+
+.site-header {
+    height: $site-header-height;
+    position: relative;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    .sl-mark {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .wrapper {
+        @extend %vertical-align;
+        text-align: center;
+        &:hover {
+            .sl-mark {
+                div {
+                    background-color: $brand-color;
+                }
+            }
+        }
+    }
+    h1 {
+        font-size: 5rem;
+        color: $brand-color;
+        line-height: 5rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+        color: #555;
+    }
+    .sl-old {
+        color: #999;
+        position: absolute;
+        top: $spacing-unit / 2;
+        right: $spacing-unit / 2;
+        font-size: 1.4rem;
+    }
+}
+
+.page-content {
+    height: 100 - $site-header-height;
+    position: relative;    
+}
+
+.home {
+    height: 100%;
+    padding-top: 2%;
+
+    .wrapper {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+    .square1,
+    .square2,
+    .square3 {
+        position: absolute;
+        top: 0;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    .square2,
+    .square3 {
+        background-color: rgba($brand-color, 0.2);        
+    }
+    .square1 {
+        background-color: $brand-color;
+        bottom: -20%;
+        left: -10%;
+        right: -10%;
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg);
+        z-index: -1;
+    }
+    .square2 {
+        bottom: -20%;
+        left: -10%;
+        right: -30%;
+        -webkit-transform: rotate(-1deg);
+        transform: rotate(-1deg);
+        z-index: -2;
+    }
+    .square3 {
+        bottom: -20%;
+        left: -10%;
+        right: -65%;
+        -webkit-transform: rotate(-7deg);
+        transform: rotate(-7deg);
+        z-index: -3;
+    }
+    .bg-image {
+        position: absolute;
+        top: 5%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-position: 50% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image:  url(/images/home-screen.jpg); 
+    }
+    .curtain {
+        background: -moz-linear-gradient(left,  rgba(39,174,96,1) 0%, rgba(39,174,96,0.94) 17%, rgba(39,174,96,0.97) 34%, rgba(39,174,96,0.93) 50%, rgba(39,174,96,0.97) 67%, rgba(39,174,96,0.94) 84%, rgba(39,174,96,1) 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(39,174,96,1)), color-stop(17%,rgba(39,174,96,0.94)), color-stop(34%,rgba(39,174,96,0.97)), color-stop(50%,rgba(39,174,96,0.93)), color-stop(67%,rgba(39,174,96,0.97)), color-stop(84%,rgba(39,174,96,0.94)), color-stop(100%,rgba(39,174,96,1)));
+        background: -webkit-linear-gradient(left,  rgba(39,174,96,1) 0%,rgba(39,174,96,0.94) 17%,rgba(39,174,96,0.97) 34%,rgba(39,174,96,0.93) 50%,rgba(39,174,96,0.97) 67%,rgba(39,174,96,0.94) 84%,rgba(39,174,96,1) 100%);
+        background: -o-linear-gradient(left,  rgba(39,174,96,1) 0%,rgba(39,174,96,0.94) 17%,rgba(39,174,96,0.97) 34%,rgba(39,174,96,0.93) 50%,rgba(39,174,96,0.97) 67%,rgba(39,174,96,0.94) 84%,rgba(39,174,96,1) 100%);
+        background: -ms-linear-gradient(left,  rgba(39,174,96,1) 0%,rgba(39,174,96,0.94) 17%,rgba(39,174,96,0.97) 34%,rgba(39,174,96,0.93) 50%,rgba(39,174,96,0.97) 67%,rgba(39,174,96,0.94) 84%,rgba(39,174,96,1) 100%);
+        background: linear-gradient(to right,  rgba(39,174,96,1) 0%,rgba(39,174,96,0.94) 17%,rgba(39,174,96,0.97) 34%,rgba(39,174,96,0.93) 50%,rgba(39,174,96,0.97) 67%,rgba(39,174,96,0.94) 84%,rgba(39,174,96,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27ae60', endColorstr='#27ae60',GradientType=1 );
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }  
+    .thanks {
+        @extend %vertical-align;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        position: absolute;
+        left: 0;
+        right: -100%;
+        bottom: 0;
+        z-index: -5;
+        opacity: 0;
+        h2 {
+            color: white;
+            font-size: 4rem;
+            margin-top: -2rem;
+        }
+        p {
+            font-size: 3rem;
+            color: white;
+            max-width: 60rem;
+            margin: auto;
+            a {
+                text-decoration: underline;
+                color: white;
+            }
+        }        
+    }
+    &.finished {
+        .sl-invite-form {
+            left: -50%;            
+            opacity: 0;
+        }
+        .thanks {
+            opacity: 1;
+            z-index: 5;
+            right: 0;
+        }
+    }  
+}
+
+.sl-invite-form {
+    @extend %vertical-align;
+    position: relative;
+    padding-bottom: 15rem;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    
+    p {
+        color: white;
+        font-size: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2.5rem;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        max-width: 50rem;        
+    }
+    .platform-selector {
+        margin: 0;
+        list-style: none;
+        font-size: 6rem;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        li {
+            text-align: center;
+            display: inline-block;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: relative;
+            width: 2em;
+            height: 2em;
+            font-size: 1em;
+            margin: 0 0.2em;
+            color: white;
+            color: rgba(white, 0.75);
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: rgba(white, 0.2);
+                color: white;
+            }
+            &.on {
+                background-color: white;
+                color: #4A90E2;
+                cursor: default;
+            }
+        }
+        i {
+            @extend %vertical-align;
+        }
+    }
+    .step1,
+    .step2 {
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .step2 {
+        opacity: 0;
+        position: absolute;
+        bottom: -2rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+    }
+    .invite-input {
+        width: 100%;
+        max-width: 50rem;
+        position: relative;
+        margin: auto;
+
+        input {
+            border: none;
+            font-size: 2.6rem;
+            border-radius: 5px;
+            padding: 0.8rem 1.5rem;
+            width: 100%;
+            &.disabled {
+                background-color: #F9F9F9;
+                cursor: wait;
+            }
+        }
+        button {
+            position: absolute;
+            bottom: 3px;
+            right: 3px;
+            top: 3px;
+            background-color: #F39C12;
+            border: none;
+            box-shadow: none;
+            border-radius: 3px;
+            color: white;
+            padding: 0 2rem;
+            font-size: 2rem;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: darken(#F39C12, 5);
+            }
+            &.disabled {
+                cursor: wait;
+                background-color: darken(#F39C12, 5);   
+            }
+        }
+    }   
+
+    &.step2 {
+        top: 42%;
+
+        p {
+            margin-bottom: 1rem;
+        }
+        .platform-selector {
+            font-size: 3rem;
+        }
+        .step2 {
+            opacity: 1;
+            bottom: 0;
+        }
+    }    
+}
+
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+    padding: 15px;
+    a {
+        color: white;
+    }
+}

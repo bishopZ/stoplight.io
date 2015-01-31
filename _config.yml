@@ -1,0 +1,12 @@
+# Site settings
+title: StopLight
+email: hi@stoplight.io
+description: >
+  StopLight Description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://stoplight.io" # the base hostname & protocol for your site
+twitter_username: stoplightio
+github_username:  stoplightio
+
+# Build settings
+markdown: kramdown
