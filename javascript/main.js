@@ -26,11 +26,11 @@ Zepto(function($){
       alert('Please input a valid email address.');
       return;
     }
-    
+    // 
     $.ajax({
       type: 'POST',
-      // url: 'stoplightio.herokuapp.com',
-      url: 'http://localhost:3005/invites',
+      url: 'https://stoplightio.herokuapp.com/invites',
+      // url: 'http://localhost:3005/invites',
       data: JSON.stringify(data),
       dataType: 'JSON',
       beforeSend: function() {
