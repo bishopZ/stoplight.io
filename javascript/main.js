@@ -29,7 +29,7 @@ Zepto(function($){
     // 
     $.ajax({
       type: 'POST',
-      url: 'https://stoplightio.herokuapp.com/invites',
+      url: 'https://stoplightapiproduction-20042.onmodulus.net/invites',
       // url: 'http://localhost:3005/invites',
       data: JSON.stringify(data),
       dataType: 'JSON',
