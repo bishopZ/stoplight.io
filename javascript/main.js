@@ -41,8 +41,8 @@ $(document).ready(function() {
     //
     $.ajax({
       type: 'POST',
-      // url: 'https://api.stoplight.io/invites',
-      url: 'http://localhost:4002/invites',
+      url: 'https://api.stoplight.io/invites',
+      // url: 'http://localhost:4002/invites',
       data: JSON.stringify(data),
       dataType: 'JSON',
       beforeSend: function() {
