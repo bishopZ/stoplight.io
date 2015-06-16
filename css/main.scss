@@ -12,13 +12,14 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$site-header-height: 40%;
+$site-header-height: 0;
 
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #F9F9F9;
 $brand-color:      #27AE60;
+$action-color:     #3880F0;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
