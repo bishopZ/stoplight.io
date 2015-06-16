@@ -112,12 +112,18 @@
             padding: 20px 0 5px 0;
             li {
                 padding: 0 20px;
-                float: left;
+                display: table-cell;
+                vertical-align: bottom;
             }
             a {
                 &:hover {
                     color: $action-color;
                 }
+            }
+        }
+        .ts-divider {
+            img {
+                max-height: 40px;
             }
         }
     }
