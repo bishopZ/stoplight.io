@@ -4,4 +4,6 @@ sitemap: false
 ---
 {% for page in site.pages %}{% if page.sitemap != false %}
 {{ site.url }}{{ page.url }}
-{% endif %}{% endfor %}
+{% endif %}{% endfor %}{% for page in site.docs %}
+{{ site.url }}{{ page.url }}
+{% endfor %}
