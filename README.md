@@ -8,30 +8,30 @@ It is a [Jekyll](http://jekyllrb.com/) website hosted on GitHub pages.
 - [npm](https://www.npmjs.com/)
 - [Bundler](http://bundler.io/)
 
-## Install
+## Installation
 
->```bash
+```bash
 gem install bundler
 npm install
->```
+```
 
 If you will get `ERROR:  Error installing nokogiri: ERROR: Failed to build gem
-native extension.` error during `bundle install`, run this command:
+native extension.` during `npm install`, run this command:
 
->```bash
+```bash
 xcode-select --install
->```
+```
 
 ## Running locally
 
->```bash
+```bash
 npm start
->```
+```
 
 ## Deploying
 
 This will deploy to GitHub pages:
 
->```bash
+```bash
 npm run deploy
->```
+```
