@@ -1,0 +1,280 @@
+.sl-mark {
+    border-color: #444;
+    border: 0.15em solid rgba(black, 0.7);
+    padding: 0.9em;
+    display: inline-block;
+    border-radius: 50%;
+
+    div {
+        width: 1.3em;
+        height: 1.3em;
+        background-color: #444;
+        background-color: rgba(black, 0.7);
+        border-radius: 50%;
+        transition: background-color 0.2s ease;
+    }
+}
+
+.site-header {
+    height: $site-header-height;
+    position: relative;
+    transform-style: preserve-3d;
+
+    .sl-mark {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .wrapper {
+        @extend %vertical-align;
+        text-align: center;
+        &:hover {
+            .sl-mark {
+                div {
+                    background-color: $brand-color;
+                }
+            }
+        }
+    }
+    h1 {
+        font-size: 5rem;
+        color: $brand-color;
+        line-height: 5rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+        color: #555;
+    }
+    .sl-old {
+        color: #999;
+        position: absolute;
+        top: $spacing-unit / 2;
+        right: $spacing-unit / 2;
+        font-size: 1.4rem;
+    }
+}
+
+.page-content {
+    height: 100%;
+}
+
+.home {
+    height: 100%;
+
+    .sl-top {
+        padding: 60px 20px 50px 20px;
+        text-align: center;
+        h1 {
+            font-size: 34px;
+            font-weight: bold;
+            border-bottom: 1px solid #DDD;
+            display: inline-block;
+            padding: 0 10px 20px 10px;
+            line-height: 34px;
+            text-shadow: 0 0 2px rgba(black, 0.3);
+        }
+        .sl-tag-line {
+            font-size: 20px;
+            color: #444;
+        }
+    }
+    .sl-middle {
+        position: relative;
+    }
+    .sl-demo-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        >.img {
+            height: 100%;
+            width: 100%;
+            max-width: 1500px;
+            margin: auto;
+            display: block;
+            background-image: url('../img/sl-demo.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    .sl-bottom {
+        text-align: center;
+        >ul {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+            padding: 20px 0 5px 0;
+            li {
+                padding: 0 20px;
+                display: table-cell;
+                vertical-align: bottom;
+            }
+            a {
+                &:hover {
+                    color: $action-color;
+                }
+            }
+        }
+        .ts-divider {
+            img {
+                max-height: 40px;
+            }
+        }
+    }
+    &.finished {
+        .sl-thanks {
+            display: block;
+        }
+        .sl-invite-form_wrapper {
+            display: none;
+        }
+    }
+}
+
+.sl-thanks {
+    display: none;
+    width: 100%;
+    margin: auto;
+    max-width: 650px;
+    margin-top: 50px;
+    background: $action-color;
+    color: white;
+    font-size: 16px;
+    border-radius: 2px;
+    text-align: left;
+    padding: 8px 12px;
+    box-shadow: 0 0 2px rgba(black, 0.3);
+    a {
+        text-decoration: underline;
+        color: white;
+    }
+}
+
+.sl-invite-form_wrapper {
+    width: 100%;
+    margin: auto;
+    max-width: 650px;
+    margin-top: 50px;
+}
+.sl-invite-input {
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 2px;
+    border: 1px solid #DDD;
+    color: $action-color;
+    &:focus,
+    &:hover {
+        border-color: #BBB;
+    }
+}
+.sl-platform-selector {
+    border: 1px solid #DDD;
+    overflow: none;
+    margin: 0 12px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+.sl-platform-selector_name {
+    padding: 8px 12px;
+    color: rgba(black, 0.5);
+    border-right: 1px solid #DDD;
+    cursor: default;
+}
+.sl-platform-selector_options {
+    list-style: none;
+    background: white;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    padding: 0 12px;
+    li {
+        margin: 6px 0;
+        cursor: pointer;
+        text-align: center;
+        i {
+            border: 1px solid transparent;
+            border-radius: 50%;
+            width: 28px;
+            padding: 5px 0;
+            display: block;
+            margin: auto;
+        }
+        &:first-child {
+            margin-right: 4px;
+        }
+        &:last-child {
+            margin-left: 4px;
+        }
+        &:hover,
+        &.on {
+            i {
+                background: #F9F9F9;
+                border-color: #DDD;
+            }
+        }
+        &.on {
+            cursor: default;
+
+            i {
+                background: $action-color;
+                border-color: $action-color;
+                box-shadow: 0 0 2px rgba(black, 0.3);
+                color: white;
+            }
+        }
+    }
+}
+.sl-platform-selector_submit {
+    font-size: 16px;
+    background: $brand-color;
+    border: 1px solid $brand-color;
+    border-radius: 2px;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    &:hover {
+        background: lighten($brand-color, 5%);
+    }
+}
+
+
+@media (max-width: 450px) {
+    .home {
+        .sl-top {
+            padding: 40px 20px 50px 20px;
+            text-align: center;
+            h1 {
+                font-size: 24px;
+                padding: 0 10px 16px 10px;
+                line-height: 32px;
+            }
+            .sl-tag-line {
+                font-size: 16px;
+                height: 50px;
+            }
+        }
+    }
+  .sl-invite-form {
+    display: block;
+    text-align: center;
+  }
+  .sl-invite-input {
+    // flex: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .sl-invite-right {
+    text-align: center;
+    margin: auto;
+  }
+  .sl-platform-selector {
+    flex: 1;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,26 @@
+# Site settings
+title: StopLight
+email: hi@stoplight.io
+description: >
+  StopLight is toolkit that helps you debug, document, and test your APIs.
+  It makes you a more productive API developer.
+url: https://stoplight.io
+twitter_username: stoplightio
+
+# Build settings
+source: app
+destination: dist
+permalink: pretty
+markdown: kramdown
+keep_files:
+  - assets
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+defaults:
+  - scope:
+      path: ''
+      type: docs
+    values:
+      layout: 'docs'
