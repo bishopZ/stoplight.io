@@ -2,6 +2,11 @@
 layout: default
 ---
 
-{% include docs-nav.html %}
-
-{{ content }}
+<div class="row">
+  <div class="col-sm-3">
+    {% include docs-nav.html %}
+  </div>
+  <div class="col-sm-9">
+    {{ content }}
+  </div>
+</div>

@@ -19,7 +19,7 @@
   "dependencies": {
     "StopLight": "stoplightio/client#feature/panel-sidebar-layout",
     "babel": "^5.8.23",
-    "bootstrap": "^3.3.5",
+    "bootstrap-sass": "^3.3.5",
     "browser-sync": "^2.9.10",
     "del": "^2.0.2",
     "event-stream": "^3.3.1",

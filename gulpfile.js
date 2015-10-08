@@ -30,6 +30,7 @@ var sources = {
   js: [
     paths.modules + 'jquery/dist/jquery.js',
     paths.modules + 'typed.js/js/typed.js',
+    paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
     paths.assets + 'javascripts/**/*.js'
   ],
   images: paths.assets + 'images/**/*',
@@ -39,7 +40,10 @@ var sources = {
 gulp.task('styles', function () {
   return gulp.src(sources.styles)
     .pipe($.plumber())
-    .pipe($.sass({outputStyle: 'compressed'}))
+    .pipe($.sass({
+      outputStyle: 'compressed',
+      includePaths: paths.modules
+    }))
     .pipe($.autoprefixer())
     .pipe(gulp.dest(paths.dist + 'assets/css'))
     .pipe(browserSync.stream())

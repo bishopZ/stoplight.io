@@ -1,17 +1,40 @@
 ---
-layout: default
+layout: null
 ---
 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif%}</title>
+  <meta name="description"
+        content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="p:domain_verify" content="6557723f1c1fca7caf9217123d1ff583"/>
+
+  <link rel="stylesheet"
+        href="/assets/css/home.css?v={{ site.time | date: '%s' }}"/>
+  <link rel="canonical"
+        href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
 <div class="home f fd-c">
 
   <div class='sl-top f-0'>
     <h1>The API Designer of your Dreams</h1>
-    <div class='sl-tag-line'>StopLight is the best way to <span class='feature-typer'></span> APIs.</div>
+
+    <div class='sl-tag-line'>StopLight is the best way to <span
+            class='feature-typer'></span> APIs.
+    </div>
 
 
     <div class='sl-invite-form_wrapper'>
       <form class='f sl-invite-form'>
-        <input class='sl-invite-input f-1' type='email' placeholder='Email' required />
+        <input class='sl-invite-input f-1' type='email' placeholder='Email'
+               required/>
 
         <div class='sl-invite-right f-0 f'>
           <div class='sl-platform-selector f-0 f'>
@@ -43,16 +66,22 @@ layout: default
 
   <div class='sl-middle f-1'>
 
-    <div class='sl-demo-image'><div class='img'></div></div>
+    <div class='sl-demo-image'>
+      <div class='img'></div>
+    </div>
 
   </div>
 
   <div class='sl-bottom f-0'>
     <ul>
-      <li><a href='https://twitter.com/{{site.twitter_username}}' target='_blank'>@{{site.twitter_username}}</a></li>
-      <li class='ts-divider'><img src='/assets/img/techstars.png' /></li>
+      <li><a href='https://twitter.com/{{site.twitter_username}}'
+             target='_blank'>@{{site.twitter_username}}</a></li>
+      <li class='ts-divider'><img src='/assets/img/techstars.png'/></li>
       <li><a href='mailto:{{site.email}}'>{{site.email}}</a></li>
     </ul>
   </div>
 
 </div>
+<script src="/assets/js/app.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

@@ -4,17 +4,14 @@
   {% include head.html %}
 
   <body>
+    <div class="container">
+      {% include header.html %}
 
-    <!--{% include header.html %}-->
+      {{ content }}
 
-    <!--<div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>-->
+      {% include footer.html %}
+    </div>
 
-    <!--{% include footer.html %}-->
-    {{ content }}
     <script src="/assets/js/app.js?v={{ site.time | date: '%s' }}"></script>
   </body>
 
