@@ -2,7 +2,7 @@
 title: StopLight
 email: hi@stoplight.io
 description: >
-  StopLight is toolkit that helps you debug, document, and test your APIs.
+  StopLight is a toolkit that helps you debug, document, and test your APIs.
   It makes you a more productive API developer.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://stoplight.io" # the base hostname & protocol for your site

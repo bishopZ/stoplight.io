@@ -30,20 +30,20 @@ $(document).ready(function() {
       platform: $(this).find('li.on').data('name'),
       email: $.trim($(this).find('input[type="email"]').val())
     }
-    if (data.platform && data.platform.length == 0) {
+    if (!data.platform || data.platform.length == 0) {
       alert('Please select a platform.');
       return;
     }
-    if (data.email && data.email.length == 0) {
+    if (!data.email || data.email.length == 0) {
       alert('Please input a valid email address.');
       return;
     }
-    //
+
     $.ajax({
       type: 'POST',
       url: 'https://api.stoplight.io/invites',
       // url: 'http://localhost:4002/invites',
-      data: JSON.stringify(data),
+      data: data,
       dataType: 'JSON',
       beforeSend: function() {
         $('.sl-invite-form').find('input,button').addClass('disabled');
