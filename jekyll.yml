@@ -6,6 +6,7 @@ description: >
   It makes you a more productive API developer.
 url: https://stoplight.io
 twitter_username: stoplightio
+intercom_app_id: o6celly6
 
 # Build settings
 source: app
