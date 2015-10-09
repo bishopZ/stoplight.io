@@ -14,8 +14,8 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         {% for item in site.pages %}
-          {% if item.title and item.url != '/404.html' %}
-            <li {% if page.url contains item.url %}class="active"{% endif %}>
+          {% if item.title and item.url != '/404.html' and item.exclude_from_nav != true %}
+            <li {% if page.url == item.url %}class="active"{% endif %}>
               <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
             </li>
           {% endif %}
