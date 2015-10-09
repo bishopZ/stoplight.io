@@ -20,7 +20,7 @@ var paths = {
   assets: './app/_assets/',
   modules: './node_modules/',
   dist: './dist/',
-  docs: './app/_docs/',
+  docs: './app/docs/',
   includes: './app/_includes/'
 }
 
@@ -98,6 +98,7 @@ gulp.task('docs', function () {
         'title: ' + (isIndex ? 'Documentation' : Help[section].title),
         'id: ' + section,
         'exclude_from_nav: ' + (isIndex ? 'false' : 'true'),
+        (isIndex ? 'alias: /docs' : ''),
         '---',
         ReactDOMServer.renderToStaticMarkup(sectionElem)
       ].join('\n')

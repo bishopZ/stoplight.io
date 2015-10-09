@@ -15,13 +15,8 @@ permalink: pretty
 markdown: kramdown
 keep_files:
   - assets
-collections:
-  docs:
-    output: true
-    permalink: /docs/:path/
 defaults:
   - scope:
-      path: ''
-      type: docs
+      path: 'docs'
     values:
       layout: 'docs'

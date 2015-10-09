@@ -6,7 +6,7 @@ DS_Store
 # jekyll
 Gemfile.lock
 dist
-app/_docs
+app/docs
 app/_includes/docs-nav.html
 
 # deploy
