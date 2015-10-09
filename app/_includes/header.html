@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar navbar-flat">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed"
@@ -13,13 +13,12 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        {% for item in site.pages %}
-          {% if item.title and item.url != '/404.html' and item.exclude_from_nav != true %}
-            <li {% if page.url == item.url %}class="active"{% endif %}>
-              <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
+        <li {% if page.url == "/" %}class="active"{% endif %}>
+          <a href="/">Home</a>
+        </li>
+        <li {% if page.url contains "/docs/" %}class="active"{% endif %}>
+          <a href="/docs">Documentation</a>
+        </li>
       </ul>
     </div>
   </div>

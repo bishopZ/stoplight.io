@@ -2,7 +2,7 @@
   // Make current nav item active
   $('.sl-sln_item_content a').each(function () {
     if (location.pathname.indexOf($(this).attr('href')) !== -1) {
-      $(this).addClass('active')
+      $(this).closest('.sl-sln_item').addClass('active')
     }
   });
 

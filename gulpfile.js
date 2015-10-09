@@ -90,15 +90,12 @@ gulp.task('docs', function () {
         }),
         fileName = section.replace(/[A-Z]/, function (match) {
           return '-' + match.toLowerCase()
-        }),
-        isIndex = section === 'welcomeOverview'
+        })
 
       fileContent = [
         '---',
-        'title: ' + (isIndex ? 'Documentation' : Help[section].title),
-        'id: ' + section,
-        'exclude_from_nav: ' + (isIndex ? 'false' : 'true'),
-        (isIndex ? 'alias: /docs' : ''),
+        'title: ' + Help[section].title,
+        (section === 'welcomeOverview' ? 'alias: /docs' : ''),
         '---',
         ReactDOMServer.renderToStaticMarkup(sectionElem)
       ].join('\n')
