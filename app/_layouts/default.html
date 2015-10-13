@@ -4,13 +4,12 @@
   {% include head.html %}
 
   <body>
-    <div class="container">
-      {% include header.html %}
 
-      {{ content }}
+    {% include header.html %}
 
-      {% include footer.html %}
-    </div>
+    {{ content }}
+
+    {% include footer.html %}
 
     <script>
       window.intercomSettings = {

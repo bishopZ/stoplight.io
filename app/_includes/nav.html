@@ -1,0 +1,14 @@
+<ul class="{{include.navClass}}">
+  <li {% if page.url contains "/api-designer" %}class="active"{% endif %}>
+    <a href="/api-designer">API Designer</a>
+  </li>
+  <li {% if page.url contains "/prism" %}class="active"{% endif %}>
+    <a href="/prism">Prism</a>
+  </li>
+  <li {% if page.url contains "/signup" %}class="active"{% endif %}>
+    <a href="/signup">Sign Up</a>
+  </li>
+  <!--<li {% if page.url contains "/docs/" %}class="active"{% endif %}>
+    <a href="/docs">Documentation</a>
+  </li>-->
+</ul>

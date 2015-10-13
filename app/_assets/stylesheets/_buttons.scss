@@ -1,0 +1,7 @@
+.btn-stoplight {
+  @include button-variant(#ba4ae7, #ffffff, #ba4ae7);
+  padding: 2px 14px;
+  border-width: 2px;
+  box-shadow: 0 0 2px 0 rgba(#000, .50);
+  border-radius: 2px;
+}

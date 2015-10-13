@@ -1,25 +1,18 @@
-<nav class="navbar navbar-flat">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed"
-              data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-              aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">{{site.title}}</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li {% if page.url == "/" %}class="active"{% endif %}>
-          <a href="/">Home</a>
-        </li>
-        <li {% if page.url contains "/docs/" %}class="active"{% endif %}>
-          <a href="/docs">Documentation</a>
-        </li>
-      </ul>
-    </div>
+<nav class="navbar navbar-flat navbar-light">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/logo-small-dark.png" alt="{{site.title}}" width="28" height="28"/>
+    </a>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+    {% include nav.html navClass='nav navbar-nav navbar-right' %}
   </div>
 </nav>
