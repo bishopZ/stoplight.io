@@ -1,7 +1,9 @@
-@import 'variables', 'mixins', 'helpers';
+@import 'variables', 'mixins';
 @import 'font-awesome/scss/font-awesome';
 @import 'bootstrap-sass/assets/stylesheets/_bootstrap';
 
+@import 'helpers';
+@import 'forms';
 @import 'buttons';
 @import 'base';
 @import 'navbar';

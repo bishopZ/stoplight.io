@@ -31,7 +31,6 @@
 
     > .active > a {
       cursor: default;
-      font-weight: bold;
 
       &,
       &:hover,
@@ -71,6 +70,16 @@
       &:hover,
       &:focus {
         color: #fff;
+      }
+    }
+
+    > .active > a {
+      cursor: default;
+
+      &,
+      &:hover,
+      &:focus {
+        color: rgba(#fff, .4);;
       }
     }
   }

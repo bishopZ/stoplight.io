@@ -1,0 +1,14 @@
+.wide-gutter {
+  .container {
+    @include container-fixed($wide-grid-gutter-width);
+  }
+
+  .row {
+    @include make-row($wide-grid-gutter-width);
+  }
+
+  [class*='col-'] {
+    padding-right: $wide-grid-gutter-width / 2;
+    padding-left: $wide-grid-gutter-width / 2;
+  }
+}
