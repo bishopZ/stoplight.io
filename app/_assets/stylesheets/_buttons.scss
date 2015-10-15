@@ -10,6 +10,6 @@
   @include button-variant(#fff, #ba4ae7, #ba4ae7);
 }
 
-.btn-light-success {
-  @include button-variant(#5fbb46, lighten($btn-success-bg, 40%), lighten($btn-success-bg, 40%));
+.btn-info-light {
+  @include button-variant(#689ff4, lighten(#689ff4, 28%), lighten(#689ff4, 28%));
 }

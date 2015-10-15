@@ -51,14 +51,13 @@
   .navbar-toggle {
     border-color: $navbar-default-toggle-border-color;
 
-    &:hover,
-    &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
-    }
-
     .icon-bar {
-      background-color: $navbar-default-toggle-icon-bar-bg;
+      background-color: $navbar-default-toggle-border-color;
     }
+  }
+  
+  .navbar-collapse.in {
+    background-color: #34495e;
   }
 }
 
