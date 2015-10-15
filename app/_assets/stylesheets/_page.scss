@@ -32,13 +32,20 @@
     }
 
     .page-hero-content {
-      @include centered-block;
-      z-index: 1;
+      margin-top: 140px;
       color: #fff;
       text-align: center;
 
+      @media (max-width: $grid-float-breakpoint) {
+        margin-top: 70px;
+      }
+
       h2 {
-        margin-bottom: 40px;
+        margin: 0 0 40px 0;
+
+        @media (max-width: $grid-float-breakpoint) {
+          margin-top: 20px;
+        }
       }
 
       h4 {
@@ -50,6 +57,10 @@
     .page-hero-action {
       text-align: center;
       margin-top: 55px;
+
+      @media (max-width: $grid-float-breakpoint) {
+        margin-top: 20px;
+      }
     }
 
     .page-hero-pic {
@@ -69,6 +80,10 @@
   section {
     margin: 80px 0;
 
+    @media (max-width: $grid-float-breakpoint) {
+      margin: 40px 0;
+    }
+
     h2 {
       text-align: center;
       margin: 0 0 50px 0;
@@ -82,9 +97,24 @@
   .invite-section {
     text-align: center;
 
-    .form-control {
-      width: 340px;
+    .form-group {
+      @media (max-width: $grid-float-breakpoint) {
+        padding: 0 25px;
+      }
+
+      &:first-child {
+        width: 340px;
+
+        @media (max-width: $grid-float-breakpoint) {
+          width: 100%;
+        }
+      }
     }
+
+    .form-control {
+      width: 100%;
+    }
+
   }
 }
 
@@ -116,10 +146,24 @@
   .media-body p {
     margin: 0;
   }
-  
+
   .media-object {
     font-size: 45px;
     color: #689ff4;
+  }
+
+  .media {
+    @media (max-width: $screen-md) {
+      margin-bottom: 20px;
+
+      .media-body {
+        text-align: center;
+      }
+
+      .media-middle {
+        display: none;
+      }
+    }
   }
 }
 
@@ -148,6 +192,21 @@
     .media-object {
       box-shadow: 0 0 2px 0 rgba(#000, .5);
       margin: 2px;
+    }
+
+    @media (max-width: $screen-md) {
+      padding: 0 15px;
+
+      .media-body {
+        text-align: left;
+      }
+
+      .media-right,
+      .media-left {
+        &.media-middle {
+          display: none;
+        }
+      }
     }
   }
 }

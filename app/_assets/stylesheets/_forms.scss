@@ -5,66 +5,65 @@
 .form-platform-selector {
   border: 1px solid #ccc;
   line-height: 1.5;
-  margin: 0 8px;
   font-size: 16px;
   border-radius: $border-radius-base;
   display: inline-block;
   vertical-align: middle;
-}
 
-.form-platform-selector-name {
-  float: left;
-  padding: 6px 12px;
-  color: rgba(black, 0.5);
-  border-right: 1px solid #ccc;
-  cursor: default;
-}
-
-.form-platform-selector-options {
-  list-style: none;
-  background: white;
-  overflow: hidden;
-  margin: 0;
-  padding: 0 12px;
-
-  li {
+  .form-platform-selector-name {
     float: left;
-    margin: 4px 0;
-    cursor: pointer;
-    text-align: center;
+    padding: 6px 12px;
+    color: rgba(black, 0.5);
+    border-right: 1px solid #ccc;
+    cursor: default;
+  }
 
-    i {
-      border: 1px solid transparent;
-      border-radius: 50%;
-      width: 28px;
-      padding: 5px 0;
-      display: block;
-      margin: auto;
-    }
+  .form-platform-selector-options {
+    list-style: none;
+    background: white;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 12px;
 
-    &:first-child {
-      margin-right: 4px;
-    }
-    &:last-child {
-      margin-left: 4px;
-    }
+    li {
+      float: left;
+      margin: 4px 0;
+      cursor: pointer;
+      text-align: center;
 
-    &:hover,
-    &.on {
       i {
-        background: #F9F9F9;
-        border-color: #ccc;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        width: 28px;
+        padding: 5px 0;
+        display: block;
+        margin: auto;
       }
-    }
 
-    &.on {
-      cursor: default;
+      &:first-child {
+        margin-right: 4px;
+      }
+      &:last-child {
+        margin-left: 4px;
+      }
 
-      i {
-        background: #3880F0;
-        border-color: #3880F0;
-        box-shadow: 0 0 2px rgba(black, 0.3);
-        color: white;
+      &:hover,
+      &.on {
+        i {
+          background: #F9F9F9;
+          border-color: #ccc;
+        }
+      }
+
+      &.on {
+        cursor: default;
+
+        i {
+          background: #3880F0;
+          border-color: #3880F0;
+          box-shadow: 0 0 2px rgba(black, 0.3);
+          color: white;
+        }
       }
     }
   }
