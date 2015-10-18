@@ -1,0 +1,16 @@
+DS_Store
+.bundle
+.idea
+*.log
+
+# jekyll
+Gemfile.lock
+dist
+app/docs
+app/_includes/docs-nav.html
+
+# deploy
+.gh-pages
+
+# package managers
+node_modules
