@@ -7,6 +7,7 @@ var browserSync = require('browser-sync').create(),
     es = require('event-stream'),
     del = require('del'),
     sequence = require('run-sequence'),
+    path = require('path'),
     React = require('react'),
     ReactDOMServer = require('react-dom/server'),
     // Load gulp plugins

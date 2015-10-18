@@ -1,3 +1,5 @@
+console.log('FOO');
+
 (function ($) {
   // Make current nav item active
   $('.sl-sln_item_content a').each(function () {
