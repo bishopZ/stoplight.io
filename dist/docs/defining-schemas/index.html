@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Schema Definitions</title>
+  <meta name="description" content="StopLight is toolkit that helps you debug, document, and test your APIs. It makes you a more productive API developer.
+">
+  <meta name="p:domain_verify" content="6557723f1c1fca7caf9217123d1ff583"/>
+
+  <link rel="stylesheet" href="/assets/css/styles.css?v=1445207262"/>
+  <link rel="canonical" href="https://stoplight.io/docs/defining-schemas/">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://use.typekit.net/jld5qzm.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-flat navbar-light">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/logo-small-dark.png" alt="StopLight" width="28" height="28"/>
+      <span>StopLight</span>
+    </a>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li >
+    <a href="/api-designer">API Designer</a>
+  </li>
+  <li >
+    <a href="/prism">Prism</a>
+  </li>
+  <li>
+    <a href="#invite">Sign Up</a>
+  </li>
+  <!--<li class="active">
+    <a href="/docs">Documentation</a>
+  </li>-->
+</ul>
+
+  </div>
+</nav>
+
+
+    <div class="docs-container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <button class="btn btn-sm btn-default">
+        <i class="fa fa-bullhorn"></i> Help Chat
+      </button>
+    </div>
+    <div class="panel-body">
+      <div class="docs-cols-container">
+        <div class="row">
+          <div class="col-sm-3 no-float">
+            <div class="sl-panel h-100 f f-1 fd-c sl-help h-100"><div class="sl-panel_warnings f-0 f"></div><div class="sl-panel_content f-1 f ov-h"><div class="sl-sidebar-layout f-1 f"><div class="sl-sln"><div class="sl-sln_list sl--depth-1"><div class="sl-sln_item_group active"><div class="sl-sln_item_content_group f ai-c"><div class="f-1">Welcome</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/welcome-overview">Getting Started</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/welcome-dashboard">The Dashboard</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">HTTP Requests</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/http-overview">Overview</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/http-capture">Capturing Traffic</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">Defining APIs</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/defining-overview">Overview</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/defining-projects">Projects</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/defining-endpoints">Endpoints</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/defining-schemas">Schemas</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/defining-security">Security Schemes</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">Mocking APIs</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/mocking-overview">Overview</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/mocking-dynamic">Dynamic Mocking</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">Validating APIs</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/validating-overview">Overview</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/validating-apis">Augmenting Existing APIs</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">Transforming APIs</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/transforms-middleware">Middleware</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/transforms-utility">Utility Functions</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/transforms-examples">Examples</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">Variables</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/variables-overview">Overview</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/variables-requests">In Requests</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/variables-definitions">In Definitions</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/variables-middleware">In Middleware</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">The Proxy</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/proxy-overview">Overview</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/proxy-debugging">Debugging</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/proxy-discovery">API Discovery</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/proxy-ssl">SSL Certs</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">Hosted Service</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/hosted-overview">Overview</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/hosted-limits">Limits</a></div></div></div></div><div class="sl-sln_item_group "><div class="sl-sln_item_content_group f ai-c"><div class="f-1">Workspaces</div></div><div class="sl-sln_list sl--depth-2"><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/workspaces-overview">Overview</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/workspaces-team">Team Members</a></div></div><div class="sl-sln_item "><div class="sl-sln_item_content f ai-c"><a href="/docs/workspaces-billing">Billing</a></div></div></div></div></div></div><div class="sl-sidebar-layout-content f f-1"><noscript></noscript></div></div></div></div>
+          </div>
+          <div class="col-sm-9 no-float">
+            <div class="sl-help_section"><h1>Schema Definitions<small>Schemas allow you to re-use JSON schemas across your definitions. You might use schemas to represent the various models in your API, and reference these schemas in your endpoint definitions.</small></h1><h2>Defining a Basic Schema</h2><p>To define a schema, first make sure you have an active project. You can choose a project by clicking on the dropdown above the resource list on the left side of the dashboard. After selecting a project, press <code>command+t</code>, or click on the <i class="fa fa-plus-circle"></i> icon at the top of the tab container to create a new tab. From the new tab, click &quot;New Schema&quot;. That&#x27;s it, now we can start defining your schema!</p><p>The first thing you&#x27;ll want to do is give the schema a common name, namespace, and an optional description. The namespace must be unique amongst schemas in this API, and can only contain letters (no spaces).</p><p>StopLight schemas are powered by <a href="http://spacetelescope.github.io/understanding-json-schema/">JSON schema</a>. There are three ways to define a schema, each providing varying levels of control and ease of use.</p><h3>By Example</h3><p>This is the quickest way to build a schema, but provides the least control. If you have an idea, or example, of what you want an instance of this schema to look like, you can click on the &quot;Example&quot; tab in the top right of the editor, and write/paste the example in. Once you&#x27;re done, make sure the editor reports that your JSON is valid in the bottom left, and then click &quot;Generate Schema&quot; in the bottom right. Tada, schema generated! From here, you can tweak / modify as needed.</p><div class="sl-help_img"><small>Defining a simple user model schema from an example.</small><div class="sl-help_gif sl--on"><img src="https://images.stoplight.io/docs/defining-schemas1.gif"/><div class="sl-help_gif_play f ai-c"><i class="fa fa-play"></i></div></div></div><h3>With the Editor</h3><p>You can use the StopLight schema editor to build JSON schema&#x27;s visually. This provides a nice compromise between ease of use, and control. Note that not all of JSON schema features are supported in the editor. You can always get it 90% there with the editor, and then switch to direct schema editing if needed.</p><h3>Direct Schema Editing</h3><p>We provide a nice code editor to manipulate your JSON schemas directly. This is the most complicated option, but is available if you need more control. Here, you can take advantage of all of JSON schema&#x27;s features.</p><h2>Using Schemas</h2><p>You use schemas by referencing them in other schemas. To do this, we use the $ref property of JSON schema. $ref support is built into the StopLight schema editor. After you have defined a schema, you can reference it in any other schema (including in endpoint definition schemas!) by selecting the $ref property type from the types section of the property details pane.</p><div class="sl-help_img"><div class="sl-help_gif sl--on"><img src="https://images.stoplight.io/docs/defining-schemas2.gif"/><div class="sl-help_gif_play f ai-c"><i class="fa fa-play"></i></div></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer class="site-footer">
+  <div class="container">
+    <div class="site-footer-content">
+      <a href="/" class="site-footer-brand">
+        <img src="/assets/img/logo-dark.png" alt="StopLight" width="108" height="27"/>
+      </a>
+
+      <div class="site-footer-links">
+        <ul class="list-inline">
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li >
+    <a href="/api-designer">API Designer</a>
+  </li>
+  <li >
+    <a href="/prism">Prism</a>
+  </li>
+  <li>
+    <a href="#invite">Sign Up</a>
+  </li>
+  <!--<li class="active">
+    <a href="/docs">Documentation</a>
+  </li>-->
+</ul>
+
+
+        <ul class="list-inline">
+          <li><a href='mailto:hi@stoplight.io'>hi@stoplight.io</a></li>
+          <li>
+            <a href='https://twitter.com/stoplightio'
+               class="fa fa-twitter-square" target='_blank'></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script>
+      window.intercomSettings = {
+        app_id: 'o6celly6'
+      };
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/o6celly6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+    </script>
+    <script src="/assets/js/app.js?v=1445207262"></script>
+  </body>
+
+</html>
