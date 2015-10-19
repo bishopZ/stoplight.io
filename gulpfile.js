@@ -29,7 +29,6 @@ var sources = {
   styles: paths.assets + 'stylesheets/**/*.scss',
   js: [
     paths.modules + 'jquery/dist/jquery.js',
-    paths.modules + 'typed.js/js/typed.js',
     paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
     paths.assets + 'javascripts/**/*.js'
   ],

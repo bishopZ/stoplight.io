@@ -37,8 +37,7 @@
     "lodash": "^3.10.1",
     "react": "0.14.0-rc1",
     "react-dom": "0.14.0-rc1",
-    "run-sequence": "^1.1.4",
-    "typed.js": "mattboldt/typed.js"
+    "run-sequence": "^1.1.4"
   },
   "devDependencies": {
     "gulp-uglify": "^1.4.1"
