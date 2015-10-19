@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="docs-container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <button class="btn btn-sm btn-default">
+        <i class="fa fa-bullhorn"></i> Help Chat
+      </button>
+    </div>
+    <div class="panel-body">
+      <div class="docs-cols-container">
+        <div class="row">
+          <div class="col-sm-3 no-float">
+            {% include docs-nav.html %}
+          </div>
+          <div class="col-sm-9 no-float">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

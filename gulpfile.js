@@ -9,6 +9,7 @@ var browserSync = require('browser-sync').create(),
     sequence = require('run-sequence'),
     React = require('react'),
     ReactDOMServer = require('react-dom/server'),
+    path = require('path'),
     // Load gulp plugins
     $ = require('gulp-load-plugins')(),
     // Babel Require hook to make require jsx working

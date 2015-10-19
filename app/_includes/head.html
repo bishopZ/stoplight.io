@@ -5,13 +5,11 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="p:domain_verify" content="6557723f1c1fca7caf9217123d1ff583"/>
 
-  <meta name="p:domain_verify" content="6557723f1c1fca7caf9217123d1ff583”/>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="/assets/css/styles.css?v={{ site.time | date: '%s' }}"/>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-  <link rel="shortcut icon" href="favicon.ico?version=2" type="image/x-icon" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://use.typekit.net/jld5qzm.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
