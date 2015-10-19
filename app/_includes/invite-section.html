@@ -1,30 +1,38 @@
 <section class="invite-section" id="invite">
   <h2>Join Our Private Beta</h2>
 
-  <form class="form-inline invite-form" data-page="{{include.page}}">
-    <div class="form-group">
-      <label class="sr-only" for="email">Email address</label>
-      <input type="email" class="form-control" id="email" placeholder="Email"
-             required>
+  <div class="invite-container">
+    <div class="alert alert-success hidden" role="alert">Thank you!</div>
+    <div class="alert alert-danger hidden" role="alert">
+      There was an error. Please email
+      <a href="mailto:hi@stoplight.io">hi@stoplight.io</a> and we'll sort it out!
     </div>
 
-    <div class="form-group">
-      <div class="form-platform-selector">
-        <div class="form-platform-selector-name">Platform</div>
-        <ul class="form-platform-selector-options">
-          <li data-name="windows" title="Windows">
-            <i class="fa fa-windows"></i>
-          </li>
-          <li data-name="osx" title="OS X">
-            <i class="fa fa-apple"></i>
-          </li>
-          <li data-name="linux" title="Linux">
-            <i class="fa fa-linux"></i>
-          </li>
-        </ul>
+    <form class="form-inline invite-form" data-page="{{include.page}}">
+      <div class="form-group">
+        <label class="sr-only" for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Email"
+               required>
       </div>
 
-      <button type="submit" class="btn btn-brand">Invite Me</button>
-    </div>
-  </form>
+      <div class="form-group">
+        <div class="form-platform-selector">
+          <div class="form-platform-selector-name">Platform</div>
+          <ul class="form-platform-selector-options">
+            <li data-name="windows" title="Windows">
+              <i class="fa fa-windows"></i>
+            </li>
+            <li data-name="osx" title="OS X">
+              <i class="fa fa-apple"></i>
+            </li>
+            <li data-name="linux" title="Linux">
+              <i class="fa fa-linux"></i>
+            </li>
+          </ul>
+        </div>
+
+        <button type="submit" class="btn btn-brand">Invite Me</button>
+      </div>
+    </form>
+  </div>
 </section>

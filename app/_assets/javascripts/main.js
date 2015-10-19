@@ -2,14 +2,14 @@
   // Make current nav item active
   $('.sl-sln_item_content a').each(function () {
     if (location.pathname.indexOf($(this).attr('href')) !== -1) {
-      $(this).closest('.sl-sln_item').addClass('active')
+      $(this).closest('.sl-sln_item').addClass('active');
     }
   });
 
   $('[href="#invite"]').on('click', function (e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    var $invite = $('#invite')
+    var $invite = $('#invite');
 
     $('html, body').animate({
       scrollTop: $invite.offset().top - 100
@@ -22,28 +22,28 @@
     $(this).addClass('on').siblings().removeClass('on');
   });
 
-  $('.invite-form').on('submit', function (e) {
+  var $inviteForm = $('.invite-form'),
+    $inviteContainer = $('.invite-container');
+
+  $inviteForm.on('submit', function (e) {
     e.preventDefault();
 
-    if ($('.invite-form').find('button').hasClass('disabled')) {
+    if ($inviteForm.find('button').hasClass('disabled')) {
       return;
     }
 
     var data = {
-      platform: $(this).find('li.on').data('name'),
-      email: $.trim($(this).find('input[type="email"]').val()),
-      page: $(this).data('page')
-    }
+      platform: $inviteForm.find('li.on').data('name'),
+      email: $.trim($inviteForm.find('input[type="email"]').val()),
+      page: $inviteForm.data('page')
+    };
 
     if (!data.platform || data.platform.length == 0) {
       alert('Please select a platform.');
       return;
     }
 
-    if (!data.email || data.email.length == 0) {
-      alert('Please input a valid email address.');
-      return;
-    }
+    $inviteContainer.find('.alert').addClass('hidden');
 
     $.ajax({
       type: 'POST',
@@ -51,21 +51,23 @@
       data: data,
       dataType: 'JSON',
       beforeSend: function () {
-        $('.invite-form').find('input,button').addClass('disabled');
-        $('.invite-form button').text('Working...');
-      },
-      success: function (data, status, xhr) {
-        $('.home').addClass('finished');
-      },
-      error: function (xhr, errorType, error) {
-        $('.invite-form').find('input,button').removeClass('disabled');
-        $('.invite-form button').text('Invite Me');
-        if (xhr.responseJSON) {
-          alert(xhr.responseJSON.error);
-        } else {
-          alert('There was an error. Please email hi@stoplight.io and we\'ll sort it out!');
-        }
+        $inviteForm.find('input, button')
+          .attr('disabled', true).filter('button').text('Working...');
       }
+    }).done(function () {
+      $inviteContainer.find('form').addClass('hidden');
+      $inviteContainer.find('.alert-success').removeClass('hidden');
+    }).fail(function (xhr) {
+      var $alert = $inviteContainer.find('.alert-danger');
+
+      if (xhr.responseJSON) {
+        $alert.text(xhr.responseJSON.error);
+      }
+
+      $inviteForm.find('input, button')
+        .removeAttr('disabled').filter('button').text('Invite Me');
+
+      $alert.removeClass('hidden');
     });
   });
 }(jQuery));
