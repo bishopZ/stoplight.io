@@ -35,12 +35,12 @@
       page: $(this).data('page')
     }
 
-    if (data.platform && data.platform.length == 0) {
+    if (!data.platform || data.platform.length == 0) {
       alert('Please select a platform.');
       return;
     }
 
-    if (data.email && data.email.length == 0) {
+    if (!data.email || data.email.length == 0) {
       alert('Please input a valid email address.');
       return;
     }
@@ -48,7 +48,7 @@
     $.ajax({
       type: 'POST',
       url: 'https://api.stoplight.io/invites',
-      data: JSON.stringify(data),
+      data: data,
       dataType: 'JSON',
       beforeSend: function () {
         $('.invite-form').find('input,button').addClass('disabled');

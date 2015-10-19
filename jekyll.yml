@@ -2,8 +2,8 @@
 title: StopLight
 email: hi@stoplight.io
 description: >
-  StopLight is toolkit that helps you debug, document, and test your APIs.
-  It makes you a more productive API developer.
+  The StopLight API Designer is a modern, collaborative API editor, built around existing open standards.
+  The StopLight API Proxy is a lightweight, dependency free proxy, built to manipulate HTTP traffic.
 url: https://stoplight.io
 twitter_username: stoplightio
 intercom_app_id: o6celly6
