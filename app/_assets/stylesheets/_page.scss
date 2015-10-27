@@ -104,6 +104,10 @@
     .invite-container {
       width: 650px;
       margin: 0 auto;
+
+      @media (max-width: $grid-float-breakpoint) {
+        width: 100%;
+      }
     }
 
     .form-group {
