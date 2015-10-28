@@ -8,6 +8,10 @@
       }
     }
 
+    .btn-stoplight {
+      font-size: 26px;
+    }
+
     .page-hero-container {
       position: relative;
       min-height: 440px;
@@ -32,7 +36,7 @@
     }
 
     .page-hero-content {
-      margin-top: 140px;
+      margin-top: 150px;
       color: #fff;
       text-align: center;
 
@@ -40,10 +44,12 @@
         margin-top: 70px;
       }
 
-      h2 {
+      h1,h2 {
+        font-weight: 300px;
         margin: 0 auto 40px auto;
         line-height: 46px;
-        max-width: 800px;
+        max-width: 900px;
+        font-weight: 300;
 
         @media (max-width: $grid-float-breakpoint) {
           margin-top: 20px;
@@ -60,7 +66,8 @@
 
     .page-hero-action {
       text-align: center;
-      margin-top: 55px;
+      margin-top: 30px;
+
 
       @media (max-width: $grid-float-breakpoint) {
         margin-top: 20px;
@@ -72,6 +79,7 @@
       margin-top: -125px;
       position: relative;
       z-index: 2;
+      box-shadow: 0 7px 25px rgba(black, 0.4);
 
       img {
         box-shadow: 0 0 2px 0 rgba(#000, .50);
