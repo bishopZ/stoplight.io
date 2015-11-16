@@ -47,7 +47,7 @@
 
     $.ajax({
       type: 'POST',
-      url: 'https://api.stoplight.io/invites',
+      url: 'https://api.stoplight.io/v1/invites',
       data: data,
       dataType: 'JSON',
       beforeSend: function () {
