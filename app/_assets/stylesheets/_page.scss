@@ -1,94 +1,4 @@
 .page {
-  .page-hero {
-    margin-top: -$navbar-height;
-
-    &.page-hero-w-pic {
-      .page-hero-container {
-        min-height: 550px;
-      }
-    }
-
-    .btn-stoplight {
-      font-size: 26px;
-    }
-
-    .page-hero-container {
-      position: relative;
-      min-height: 440px;
-    }
-
-    .page-hero-grad,
-    .page-hero-dots {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
-    .page-hero-grad {
-      background-color: #ddd;
-    }
-
-    .page-hero-dots {
-      background-repeat: repeat;
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAAANElEQVQIHWNkYGDgBOL/QPwXSjMyQRgirECaEYZBDJgASDUI/GcBEWAmEgHSDtMGkgQrAAAGoAkuR5enTwAAAABJRU5ErkJggg==)
-    }
-
-    .page-hero-content {
-      margin-top: 150px;
-      color: #fff;
-      text-align: center;
-
-      @media (max-width: $grid-float-breakpoint) {
-        margin-top: 70px;
-      }
-
-      h1,h2 {
-        font-weight: 300px;
-        margin: 0 auto 40px auto;
-        line-height: 46px;
-        max-width: 900px;
-        font-weight: 300;
-
-        @media (max-width: $grid-float-breakpoint) {
-          margin-top: 20px;
-        }
-      }
-
-      h4 {
-        margin: 0 auto;
-        font-weight: 300;
-        max-width: 800px;
-        line-height: 1.4;
-      }
-    }
-
-    .page-hero-action {
-      text-align: center;
-      margin-top: 30px;
-
-
-      @media (max-width: $grid-float-breakpoint) {
-        margin-top: 20px;
-      }
-    }
-
-    .page-hero-pic {
-      text-align: center;
-      margin-top: -125px;
-      position: relative;
-      z-index: 2;
-      box-shadow: 0 7px 25px rgba(black, 0.4);
-
-      img {
-        box-shadow: 0 0 2px 0 rgba(#000, .50);
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-
   section {
     margin: 80px 0;
 
@@ -135,6 +45,96 @@
     .form-control {
       width: 100%;
     }
+  }
+}
+
+.page-hero {
+  margin-top: -$navbar-height;
+
+  &.page-hero-w-pic {
+    .page-hero-container {
+      min-height: 550px;
+    }
+  }
+
+  .btn-stoplight {
+    font-size: 26px;
+  }
+}
+
+.page-hero-container {
+  position: relative;
+  min-height: 440px;
+}
+
+.page-hero-grad,
+.page-hero-dots {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.page-hero-grad {
+  background-color: #ddd;
+}
+
+.page-hero-dots {
+  background-repeat: repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAAANElEQVQIHWNkYGDgBOL/QPwXSjMyQRgirECaEYZBDJgASDUI/GcBEWAmEgHSDtMGkgQrAAAGoAkuR5enTwAAAABJRU5ErkJggg==)
+}
+
+.page-hero-content {
+  margin-top: 150px;
+  color: #fff;
+  text-align: center;
+
+  @media (max-width: $grid-float-breakpoint) {
+    margin-top: 70px;
+  }
+
+  h1,h2 {
+    font-weight: 300px;
+    margin: 0 auto 40px auto;
+    line-height: 46px;
+    max-width: 900px;
+    font-weight: 300;
+
+    @media (max-width: $grid-float-breakpoint) {
+      margin-top: 20px;
+    }
+  }
+
+  h4 {
+    margin: 0 auto;
+    font-weight: 300;
+    max-width: 800px;
+    line-height: 1.4;
+  }
+}
+
+.page-hero-action {
+  text-align: center;
+  margin-top: 30px;
+
+
+  @media (max-width: $grid-float-breakpoint) {
+    margin-top: 20px;
+  }
+}
+
+.page-hero-pic {
+  text-align: center;
+  margin-top: -125px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 7px 25px rgba(black, 0.4);
+
+  img {
+    box-shadow: 0 0 2px 0 rgba(#000, .50);
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -205,6 +205,10 @@
     background-image: radial-gradient(50% 146%, #4eb509 47%, #4aa50d 100%);
   }
 
+  .page-hero-content {
+    margin-top: 110px;
+  }
+
   h4 {
     font-size: 24px;
     margin-bottom: 21px;
@@ -244,6 +248,10 @@
 // Prism page
 
 .prism-page {
+  .page-hero-content {
+    margin-top: 110px;
+  }
+
   .page-hero-grad {
     background-color: #34495e;
     background-image: radial-gradient(50% 146%, #34495e 47%, #222e3b 100%);
