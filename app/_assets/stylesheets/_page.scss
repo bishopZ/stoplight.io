@@ -116,8 +116,8 @@
 
 .page-hero-action {
   text-align: center;
-  margin-top: 30px;
-
+  margin: 30px 10px 0 10px;
+  display: inline-block;
 
   @media (max-width: $grid-float-breakpoint) {
     margin-top: 20px;
