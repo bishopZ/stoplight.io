@@ -130,6 +130,8 @@
   position: relative;
   z-index: 2;
   box-shadow: 0 7px 25px rgba(black, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
 
   img {
     box-shadow: 0 0 2px 0 rgba(#000, .50);
