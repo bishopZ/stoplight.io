@@ -264,3 +264,25 @@
     margin-bottom: 21px;
   }
 }
+
+// Terms page
+
+.terms-page {
+  .page-hero-container {
+    min-height: 380px;
+  }
+
+  .page-hero-content {
+    margin-top: 130px;
+  }
+
+  .page-hero-grad {
+    background-color: #34495e;
+    background-image: radial-gradient(50% 146%, #34495e 47%, #222e3b 100%);
+  }
+
+  h4 {
+    font-size: 24px;
+    margin-bottom: 21px;
+  }
+}
