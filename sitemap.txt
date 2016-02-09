@@ -39,6 +39,8 @@ https://stoplight.io/docs/proxy-standalone/
 
 https://stoplight.io/docs/proxy-transparent/
 
+https://stoplight.io/terms/
+
 https://stoplight.io/docs/transforms-examples/
 
 https://stoplight.io/docs/transforms-middleware/
