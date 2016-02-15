@@ -7,6 +7,7 @@ description: >
 url: https://stoplight.io
 twitter_username: stoplightio
 intercom_app_id: o6celly6
+segment_id: u5wROFQLQrgirhiXnEjdatXN7dbE9vNP
 
 # Build settings
 source: app
@@ -15,8 +16,4 @@ permalink: pretty
 markdown: kramdown
 keep_files:
   - assets
-defaults:
-  - scope:
-      path: 'docs'
-    values:
-      layout: 'docs'
+

@@ -4,11 +4,8 @@ var browserSync = require('browser-sync').create(),
     gutil = require('gulp-util'),
     ghPages = require('gh-pages'),
     child_process = require('child_process'),
-    es = require('event-stream'),
     del = require('del'),
     sequence = require('run-sequence'),
-    React = require('react'),
-    ReactDOMServer = require('react-dom/server'),
     path = require('path'),
     // Load gulp plugins
     $ = require('gulp-load-plugins')(),
@@ -21,7 +18,6 @@ var paths = {
   assets: './app/_assets/',
   modules: './node_modules/',
   dist: './dist/',
-  docs: './app/docs/',
   includes: './app/_includes/'
 }
 
@@ -31,6 +27,7 @@ var sources = {
   js: [
     paths.modules + 'jquery/dist/jquery.js',
     paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+    paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/affix.js',
     paths.assets + 'javascripts/**/*.js'
   ],
   images: paths.assets + 'images/**/*',
@@ -73,58 +70,6 @@ gulp.task('fonts', function () {
     .pipe(browserSync.stream())
 })
 
-gulp.task('docs', function () {
-  var fileContent = '',
-    tasks = [],
-    Help = require('StopLight/dashboard/components/help/Help.jsx'),
-    ignore = ['isReactClass', 'displayName', 'propTypes', 'action', 'gif', 'img']
-
-  for (var section in Help) {
-    if (Help.hasOwnProperty(section) && ignore.indexOf(section) === -1) {
-      var sectionElem = React.createElement(Help[section], {
-          rootPath: '/docs',
-          staticMarkup: true,
-          startStoryHandler: new Function,
-          updateSection: new Function,
-          createTabHandler: new Function
-        }),
-        fileName = section.replace(/[A-Z]/, function (match) {
-          return '-' + match.toLowerCase()
-        })
-
-      fileContent = [
-        '---',
-        'title: ' + Help[section].title,
-        (section === 'welcomeOverview' ? 'alias: /docs' : ''),
-        '---',
-        ReactDOMServer.renderToStaticMarkup(sectionElem)
-      ].join('\n')
-
-      tasks.push(file(fileName + '.html', fileContent, {src: true})
-        .pipe(gulp.dest(paths.docs)))
-    }
-  }
-
-  return es.merge.apply(null, tasks)
-})
-
-gulp.task('docs-nav', function () {
-  var HelpTab = require('StopLight/dashboard/components/tabs/HelpTab.jsx'),
-    navElem = React.createElement(HelpTab, {
-      rootPath: '/docs',
-      staticMarkup: true,
-      cache: {},
-      updateStoryStep: new Function,
-      updateSection: new Function,
-      createTabHandler: new Function,
-      startStoryHandler: new Function,
-      cacheUpdateHandler: new Function
-    })
-
-  return file('docs-nav.html', ReactDOMServer.renderToStaticMarkup(navElem),
-    {src: true}).pipe(gulp.dest(paths.includes))
-})
-
 gulp.task('jekyll', function (cb) {
   var command = 'bundle exec jekyll build --config jekyll.yml --destination '
     + paths.dist
@@ -136,7 +81,7 @@ gulp.task('jekyll', function (cb) {
   })
 })
 
-gulp.task('html', ['docs-nav', 'docs', 'jekyll'], function () {
+gulp.task('html', ['jekyll'], function () {
   return gulp.src(paths.dist + '/**/*.html')
     .pipe($.plumber())
     .pipe(gulp.dest(paths.dist))

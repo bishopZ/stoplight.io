@@ -1,9 +1,7 @@
 .btn-stoplight {
-  @include button-variant(#ba4ae7, #fff, #ba4ae7);
-  padding: 5px 20px;
-  border-width: 2px;
-  box-shadow: 0 0 1px 0 rgba(#000, .50);
+  @include button-variant($navbar-active-link-color, #fff, $navbar-active-link-color);
   border-radius: $border-radius-base;
+  font-weight: 300;
 }
 
 .btn-brand {
@@ -12,4 +10,13 @@
 
 .btn-info-light {
   @include button-variant(#689ff4, lighten(#689ff4, 28%), lighten(#689ff4, 28%));
+}
+
+.btn-signup {
+  @include button-variant(#fff, transparent, $navbar-active-link-color);
+
+  &:hover {
+    background-color: $navbar-active-link-color;
+    color: #fff;
+  }
 }
