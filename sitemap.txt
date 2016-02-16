@@ -1,6 +1,4 @@
 
-https://stoplight.io/api-designer/
-
 https://stoplight.io/docs/defining-endpoints/
 
 https://stoplight.io/docs/defining-overview/
@@ -24,8 +22,6 @@ https://stoplight.io/
 https://stoplight.io/docs/mocking-dynamic/
 
 https://stoplight.io/docs/mocking-overview/
-
-https://stoplight.io/prism/
 
 https://stoplight.io/docs/proxy-debugging/
 
