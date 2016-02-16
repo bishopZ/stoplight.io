@@ -2,6 +2,8 @@
   @include button-variant($navbar-active-link-color, #fff, $navbar-active-link-color);
   border-radius: $border-radius-base;
   font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .btn-brand {

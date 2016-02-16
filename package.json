@@ -34,6 +34,7 @@
     "gulp-util": "^3.0.6",
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
+    "particles.js": "^2.0.0",
     "run-sequence": "^1.1.4"
   },
   "devDependencies": {

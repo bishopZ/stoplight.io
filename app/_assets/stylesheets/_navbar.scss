@@ -1,10 +1,17 @@
+.navbar {
+  .container {
+    width: 100%;
+    max-width: 1400px;
+  }
+}
+
 .navbar-flat {
   transition: background-color .3s ease;
   border: 0 none;
   background-color: transparent;
 
   .navbar-brand {
-    padding: 30px 0 0 15px;
+    padding: 0 0 0 15px;
     line-height: 25px;
     color: #fff;
     font-size: 16px;
@@ -12,9 +19,10 @@
     transition: color .3s ease;
 
     img {
-      display: inline-block;
-      vertical-align: -7px;
-      margin-right: 4px;
+      margin: -2px 8px 0 0;
+      &.light {
+        display: none;
+      }
     }
   }
 
@@ -78,13 +86,28 @@
   box-shadow: 0 2px 6px rgba(#000, .15);
 
   .navbar-brand {
-    color: #e0e1e1;
+    color: #888;
+
+    img {
+      &.light {
+        display: block;
+      }
+      &.dark {
+        display: none;
+      }
+    }
   }
 
   .navbar-nav {
     > li {
       > a, .btn {
         color: #888;
+      }
+
+      .btn {
+        &:hover {
+          color: #fff;
+        }
       }
     }
   }
