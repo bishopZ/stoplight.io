@@ -1,9 +1,9 @@
 # Site settings
 title: StopLight
-email: hi@stoplight.io
+email: support@stoplight.io
 description: >
-  The StopLight API Designer is a modern, collaborative API editor, built around existing open standards.
-  The StopLight API Proxy is a lightweight, dependency free proxy, built to manipulate HTTP traffic.
+  The StopLight API Designer is a suite of API modeling tools, built around existing open standards.
+  Mock, document, and test your APIs with ease.
 url: https://stoplight.io
 twitter_username: stoplightio
 intercom_app_id: o6celly6
