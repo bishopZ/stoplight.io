@@ -26,7 +26,7 @@
 .page-hero {
   color: #fff;
   text-align: center;
-  background-color: #2c3e50;
+  background-color: #111D2B;
   min-height: 535px;
   margin-top: -$navbar-height;
   position: relative;
@@ -79,6 +79,7 @@
     h2 {
       margin: 0 0 60px 0;
       font-weight: lighter;
+      color: #333c4e;
     }
 
     p {
@@ -93,9 +94,13 @@
   }
 
   .home-page-feature {
-    margin: auto;
+    margin: 0 auto;
     max-width: 550px;
     padding-left: 30px;
+
+    &.no-pad {
+      padding-left: 0;
+    }
   }
 
   .home-page-feature-img {
