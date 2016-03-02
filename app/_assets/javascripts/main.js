@@ -116,4 +116,49 @@
   if (/WebKit/.test(navigator.userAgent)) {
     particlesJS('le-dots', particleConfig);
   }
+
+  $( document ).ready(function() {
+    location.queryString = {};
+    location.search.substr(1).split("&").forEach(function (pair) {
+        if (pair === "") return;
+        var parts = pair.split("=");
+        location.queryString[parts[0]] = parts[1] &&
+            decodeURIComponent(parts[1].replace(/\+/g, " "));
+    });
+
+    var appendParams = '';
+
+    if (location.queryString['r'] || localStorage['r']) {
+      localStorage['r'] = (location.queryString['r'] || localStorage['r']);
+      appendParams += '?r=' + (location.queryString['r'] || localStorage['r']);
+    }
+
+    if (appendParams.length) {
+      appendParams += '&utm_source=';
+    } else {
+      appendParams += '?utm_source=';
+    }
+
+    if (location.queryString['utm_source'] || localStorage['utm_source']) {
+      localStorage['utm_source'] = (location.queryString['utm_source'] || localStorage['utm_source']);
+      appendParams += (location.queryString['utm_source'] || localStorage['utm_source']);
+    } else {
+       appendParams += 'stoplight';
+    }
+
+    if (location.queryString['utm_medium'] || localStorage['utm_medium']) {
+      localStorage['utm_medium'] = (location.queryString['utm_medium'] || localStorage['utm_medium']);
+      appendParams += '&utm_medium=' + (location.queryString['utm_medium'] || localStorage['utm_medium']);
+    }
+
+    $('a[href^="https://designer.stoplight.io"]').each(function(){
+      var params = appendParams;
+
+      if (!location.queryString['utm_medium'] && !localStorage['utm_medium']) {
+        params += '&utm_medium=' + $(this).data('medium');
+      }
+
+      $(this).attr('href', $(this).prop('href') + params);
+    });
+  });
 }(jQuery));
