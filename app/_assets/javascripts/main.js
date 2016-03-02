@@ -128,9 +128,12 @@
 
     var appendParams = '';
 
-    if (location.queryString['r'] || localStorage['r']) {
-      localStorage['r'] = (location.queryString['r'] || localStorage['r']);
-      appendParams += '?r=' + (location.queryString['r'] || localStorage['r']);
+    // user referrals
+    if ( localStorage['r'] ) {
+      appendParams += '?r=' + localStorage['r'];
+    } else if ( location.queryString['r'] ) {
+      localStorage['r'] = location.queryString['r'];
+      appendParams += '?r=' + location.queryString['r'];
     }
 
     if (appendParams.length) {
@@ -139,22 +142,37 @@
       appendParams += '?utm_source=';
     }
 
-    if (location.queryString['utm_source'] || localStorage['utm_source']) {
-      localStorage['utm_source'] = (location.queryString['utm_source'] || localStorage['utm_source']);
-      appendParams += (location.queryString['utm_source'] || localStorage['utm_source']);
+    // utm source
+    if (localStorage['utm_source']) {
+      appendParams += localStorage['utm_source'];
+    } else if (location.queryString['utm_source']) {
+      localStorage['utm_source'] = location.queryString['utm_source'];
+      appendParams += location.queryString['utm_source'];
+    } else if (document.referrer.length) {
+      var url = new URL(document.referrer);
+      var hostname = url.hostname;
+      var hostnameArray = hostname.split('.');
+      if (hostnameArray.length > 2) {
+        hostname = hostnameArray.splice(1, hostnameArray.length).join('.');
+      }
+
+      localStorage['utm_source'] = hostname;
+      appendParams += hostname;
     } else {
-       appendParams += 'stoplight';
+      appendParams += 'stoplight';
     }
 
-    if (location.queryString['utm_medium'] || localStorage['utm_medium']) {
-      localStorage['utm_medium'] = (location.queryString['utm_medium'] || localStorage['utm_medium']);
-      appendParams += '&utm_medium=' + (location.queryString['utm_medium'] || localStorage['utm_medium']);
+    // utm medium
+    if (!localStorage['utm_medium'] && location.queryString['utm_medium']) {
+      localStorage['utm_medium'] = location.queryString['utm_medium'];
     }
 
     $('a[href^="https://designer.stoplight.io"]').each(function(){
       var params = appendParams;
 
-      if (!location.queryString['utm_medium'] && !localStorage['utm_medium']) {
+      if (localStorage['utm_medium']) {
+        params += '&utm_medium=' + localStorage['utm_medium'];
+      } else {
         params += '&utm_medium=' + $(this).data('medium');
       }
 
