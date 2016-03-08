@@ -1,0 +1,19 @@
+// Flexbox
+
+.f {
+  display: flex;
+  flex: none;
+}
+
+.f-0 {
+  flex: 0 0 auto;
+}
+
+.f-1 {
+  flex: 1;
+  min-height: 0;
+}
+
+.ai-c {
+  align-items: center;
+}

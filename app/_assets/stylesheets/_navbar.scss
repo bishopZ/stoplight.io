@@ -80,11 +80,13 @@
     background-color: #34495e;
   }
 }
-
 .navbar-flat.affix {
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(#000, .15);
+}
 
+.navbar-flat.affix,
+.navbar-flat.light {
   .navbar-brand {
     color: #888;
 
@@ -92,6 +94,7 @@
       &.light {
         display: block;
       }
+
       &.dark {
         display: none;
       }
@@ -102,6 +105,10 @@
     > li {
       > a, .btn {
         color: #888;
+
+        &:hover {
+          color: $navbar-active-link-color;
+        }
       }
 
       .btn {

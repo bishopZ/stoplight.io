@@ -9,13 +9,13 @@
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#fff"
       },
       "shape": {
         "type": "circle",
         "stroke": {
           "width": 0,
-          "color": "#000000"
+          "color": "#000"
         },
         "polygon": {
           "nb_sides": 5
@@ -44,7 +44,7 @@
       "line_linked": {
         "enable": true,
         "distance": 100,
-        "color": "#ffffff",
+        "color": "#fff",
         "opacity": 0.5,
         "width": 1
       },
@@ -86,7 +86,7 @@
       }
     },
     "retina_detect": true
-  }
+  };
 
   var $navbar = $('.navbar'),
       navbarHeight = $navbar.outerHeight();
@@ -95,43 +95,44 @@
     var hash = this.hash,
         $el = $(hash);
 
-    if (!$el.length) {
-      return
+    if (!$el.length && hash !== '#top') {
+      return;
     }
 
     e.preventDefault();
 
     $('html, body').animate({
-      scrollTop: $el.offset().top - navbarHeight
+      scrollTop: hash === '#top' ? 0 : $el.offset().top - navbarHeight
     }, 500, function() {
-      window.location.hash = hash;
+      if (hash !== '#top') {
+        window.location.hash = hash;
+      }
     });
-
   });
 
   $navbar.affix({
     offset: {top: 20}
   });
 
-  if (/WebKit/.test(navigator.userAgent)) {
+  if (/WebKit/.test(navigator.userAgent) && $('#le-dots').length) {
     particlesJS('le-dots', particleConfig);
   }
 
-  $( document ).ready(function() {
+  (function() {
     location.queryString = {};
-    location.search.substr(1).split("&").forEach(function (pair) {
-        if (pair === "") return;
-        var parts = pair.split("=");
-        location.queryString[parts[0]] = parts[1] &&
-            decodeURIComponent(parts[1].replace(/\+/g, " "));
+    location.search.substr(1).split("&").forEach(function(pair) {
+      if (pair === "") return;
+      var parts = pair.split("=");
+      location.queryString[parts[0]] = parts[1] &&
+        decodeURIComponent(parts[1].replace(/\+/g, " "));
     });
 
     var appendParams = '';
 
     // user referrals
-    if ( localStorage['r'] ) {
+    if (localStorage['r']) {
       appendParams += '?r=' + localStorage['r'];
-    } else if ( location.queryString['r'] ) {
+    } else if (location.queryString['r']) {
       localStorage['r'] = location.queryString['r'];
       appendParams += '?r=' + location.queryString['r'];
     }
@@ -167,7 +168,7 @@
       localStorage['utm_medium'] = location.queryString['utm_medium'];
     }
 
-    $('a[href^="https://designer.stoplight.io"]').each(function(){
+    $('a[href^="https://designer.stoplight.io"]').each(function() {
       var params = appendParams;
 
       if (localStorage['utm_medium']) {
@@ -178,5 +179,5 @@
 
       $(this).attr('href', $(this).prop('href') + params);
     });
-  });
+  }());
 }(jQuery));
