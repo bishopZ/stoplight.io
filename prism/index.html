@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Prism - StopLight</title>
+  <meta name="description" content="StopLight, providing engineering teams with the best way to document, test, and build web APIs.
+">
+  <meta name="p:domain_verify" content="6557723f1c1fca7caf9217123d1ff583"/>
+
+  <meta property="og:url" content="https://stoplight.io" />
+  <meta property="og:site_name" content="StopLight" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Prism" />
+  <meta property="og:description" content="StopLight, providing engineering teams with the best way to document, test, and build web APIs.
+" />
+  <meta property="og:image" content="https://stoplight.io/assets/img/homescreen.png" />
+  <meta property="fb:app_id" content="580327892114787" />
+
+  <link rel="stylesheet" href="/assets/css/styles.css?v=1457495733"/>
+  <link rel="canonical" href="https://stoplight.io/prism/">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600italic,400italic' rel='stylesheet' type='text/css'>
+</head>
+
+  <body>
+
+    <header class="navbar navbar-flat navbar-light navbar-fixed-top light">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+              aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand f ai-c" href="/">
+        <img src="/assets/img/mark_light.png" alt="StopLight" width="25" height="25" class="f-0 light" />
+        <img src="/assets/img/mark_dark.png" alt="StopLight" width="25" height="25" class="f-0 dark" />
+        <div class='f-0'>StopLight</div>
+      </a>
+    </div>
+    <nav id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+  <li>
+    <a href="/" target="_blank">HOME</a>
+  </li>
+  <li>
+    <a href="http://api-docs.io" target="_blank">API DOCS</a>
+  </li>
+  <li class="d-n">
+    <a href="/prism">PRISM</a>
+  </li>
+  <li>
+    <a href="/#pricing" class="animated-scroll">PRICING</a>
+  </li>
+  <li>
+    <a href="https://blog.stoplight.io" target="_blank">BLOG</a>
+  </li>
+  <li>
+    <a href="https://designer.stoplight.io/login" data-medium="nav" target="_blank">LOGIN</a>
+  </li>
+  <li>
+    <div>
+      <a class="btn btn-signup navbar-btn" href="https://designer.stoplight.io/register"
+         target="_blank" data-medium="nav">SIGN UP FREE</a>
+    </div>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page prism-page">
+  <div class="page-hero">
+    <div class="container">
+      <h2>Prism. The perfect OAS (Swagger) companion.</h2>
+      <h3>Supercharge any OAS file with mocking, transformations, validations, and more.</h3>
+
+      <div class="page-hero-binaries row">
+        <div class="col-md-4">
+          <div class="fa fa-linux"></div>
+          <p>
+            <a href="#" class="btn btn-default">Linux 64-bit</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-default">Linux 32-bit</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <div class="fa fa-apple"></div>
+          <p>
+            <a href="http://download.prism-proxy.io/download/osx_64" class="btn btn-default">OS X 64-bit</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <div class="fa fa-windows"></div>
+          <p>
+            <a href="#" class="btn btn-default">Windows 64-bit</a>
+          </p>
+          <p>
+            <a href="#" class="btn btn-default">Windows 32-bit</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-hero-version">Version 0.12.1 -
+      March 6th, 2016
+    </div>
+  </div>
+
+  <div class="run-code-example">
+    <pre><code>./prism run --mock --list --spec http://petstore.swagger.io/v2/swagger.json</code></pre>
+  </div>
+
+  <section class="page-section" id="instant-mock-server">
+    <div class="container">
+      <div class="row table-row">
+        <div class="col-md-6 text-right">
+          <h2>Instant Mock Server</h2>
+          <p>Starting Prism with the --mock flag will create a mock server,
+            built off of the given OAS specification file.</p>
+          <p>If a request comes in for a response without a defined example,
+            Prism will dynamically generate a response based on the response’s
+            schema.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="prism-page-feature-icon">
+            <span class="fa fa-bolt"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="automatic-request-validation">
+    <div class="container">
+      <div class="row table-row">
+        <div class="col-md-6">
+          <div class="prism-page-feature-icon">
+            <span class="fa fa-lock"></span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Automatic Request Validation</h2>
+          <p>Simulates real server behavior by automatically validating incoming
+            request headers, query string, and bodies, against your OAS
+            specification.</p>
+          <p>If validation fails, Prism will return a 400 response with helpful
+            error messages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="request-transformations">
+    <div class="container">
+      <div class="row table-row">
+        <div class="col-md-6 text-right">
+          <h2>Request Transformations</h2>
+          <p>Need a mocked response property to always be a random future date?
+            No problem. Prism extends the swagger spec with simple scripts,
+            written in plain Javascript.</p>
+          <p>Write scripts for more complex mocking behavior, custom
+            validations, and much more. You can even use Prism as a full blown
+            network proxy, and setup scripts to block access to certain
+            websites.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="prism-page-feature-icon">
+            <span class="fa fa-code"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="simple-and-free">
+    <div class="container">
+      <div class="row table-row">
+        <div class="col-md-6">
+          <div class="prism-page-feature-icon">
+            <span class="fa fa-magic"></span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Simple &amp; Free</h2>
+          <p>Prism was born out of the StopLight modeling tools, and is
+            integrated into the StopLight API Designer. Running it standalone is
+            completely free, and since it has zero dependencies, extremely
+            simple!</p>
+          <p>Just download and run it from your command line. Easy as 1..2..</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="features">
+    <div class="container">
+      <h2 class="text-center">Features</h2>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Mocking</h4>
+          <p>Turns any OAS file into a <br> mock server.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>List</h4>
+          <p>Pretty print the paths of any OAS file to your terminal.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Spec Validation</h4>
+          <p>Validate any OAS file from your<br>terminal.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Dynamic Responses</h4>
+          <p>Generates responses from your JSON schemas.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>HTTP Validation</h4>
+          <p>Validates requests / responses against your OAS definition.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Before Scripts</h4>
+          <p>Simple JS scripts invoked before traffic reaches your server.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Logging</h4>
+          <p>Optionally log traffic to an HTTP location, or MongoDB.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Hot Reload</h4>
+          <p>Automatically reloads when your spec file changes.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>After Scripts</h4>
+          <p>Simple JS scripts invoked on traffic returning from your
+            server.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Full Proxy</h4>
+          <p>Can be used as a system-wide <br> proxy.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>MITM</h4>
+          <p>Can be used as a MITM proxy, with HTTPS traffic.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Dependency Free</h4>
+          <p>Just download and run. Prism has no external requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="get-started">
+    <div class="container">
+      <a href="#top" class="btn btn-lg btn-stoplight animated-scroll">DOWNLOAD</a>
+
+      <p>and</p>
+
+      <a href="https://designer.stoplight.io/docs/proxy"
+         class="btn btn-lg btn-stoplight animated-scroll"
+         target="_blank" data-medium='prism-learn'>LEARN</a>
+    </div>
+  </section>
+</div>
+
+
+    <footer class="site-footer">
+  <div class="container">
+    <div class="site-footer-content">
+      <a href="/" class="site-footer-brand">
+        <img src="/assets/img/logo-dark.png" alt="StopLight" width="108" height="27"/>
+      </a>
+
+      <a href="http://techstars.com" class="site-footer-ts" target='_blank'>
+        <img src="/assets/img/techstars.png" alt="Techstars" width="55" />
+      </a>
+
+      <div class="site-footer-links">
+        <ul class="list-inline">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="https://blog.stoplight.io" target="_blank">Blog</a>
+          </li>
+          <li>
+            <a href="http://press.stoplight.io">Press</a>
+          </li>
+          <li>
+            <a href="https://designer.stoplight.io/docs" target="_blank">Docs</a>
+          </li>
+          <li>
+            <a href="http://api-docs.io" target="_blank">API Docs</a>
+          </li>
+          <li class="d-n">
+            <a href="/prism" target="_blank">Prism</a>
+          </li>
+          <li>
+            <a href="http://status.stoplight.io" target="_blank">Status</a>
+          </li>
+          <li>
+            <a href="https://designer.stoplight.io/login" data-medium='footer' target="_blank">Login</a>
+          </li>
+          <li>
+            <a href="https://designer.stoplight.io/register" data-medium='footer' target="_blank">Register</a>
+          </li>
+        </ul>
+
+        <ul class="list-inline">
+          <li><a href='mailto:support@stoplight.io'>support@stoplight.io</a></li>
+          <li>
+            <a href='https://twitter.com/stoplightio' target='_blank'>
+              <i class='fa fa-twitter'></i> @stoplightio
+            </a>
+          </li>
+          <li>
+            <a href='/terms'>Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/assets/js/app.js?v=1457495733"></script>
+    <script>
+      window.intercomSettings = {
+        app_id: 'o6celly6'
+      };
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/o6celly6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+    </script>
+    <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+        analytics.load('u5wROFQLQrgirhiXnEjdatXN7dbE9vNP');
+        analytics.page()
+      }}();
+    </script>
+  </body>
+
+</html>
