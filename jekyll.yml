@@ -2,14 +2,15 @@
 title: StopLight
 email: support@stoplight.io
 description: >
-  The StopLight API Designer is a suite of API modeling tools, built around existing open standards.
-  Mock, document, and test your APIs with ease.
+  StopLight, providing engineering teams with the best way to document, test, and build web APIs.
 url: https://stoplight.io
+logo: https://stoplight.io/assets/img/logo-dark.png
 twitter_username: stoplightio
 intercom_app_id: o6celly6
 segment_id: u5wROFQLQrgirhiXnEjdatXN7dbE9vNP
 prism_version: 0.12.1
 prism_last_updated: March 6th, 2016
+fb_id: 580327892114787
 
 # Build settings
 source: app
