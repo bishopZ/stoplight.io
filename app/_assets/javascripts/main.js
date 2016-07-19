@@ -168,7 +168,7 @@
       localStorage['utm_medium'] = location.queryString['utm_medium'];
     }
 
-    $('a[href^="https://designer.stoplight.io"]').each(function() {
+    $('a[href^="https://app.stoplight.io"]').each(function() {
       var params = appendParams;
 
       if (localStorage['utm_medium']) {

@@ -3,6 +3,19 @@
     width: 100%;
     max-width: 1400px;
   }
+
+  .v2-alert {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: #4a90e2;
+    padding: 8px 0;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 }
 
 .navbar-flat {
