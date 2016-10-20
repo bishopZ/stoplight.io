@@ -1,13 +1,13 @@
 .btn-stoplight {
   @include button-variant($navbar-active-link-color, #fff, $navbar-active-link-color);
   border-radius: $border-radius-base;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $default-weight;
 }
 
 .btn-brand {
-  @include button-variant(#fff, #ba4ae7, #ba4ae7);
+  @include button-variant($font-light-color, #ba4ae7, #ba4ae7);
 }
 
 .btn-info-light {
@@ -15,10 +15,10 @@
 }
 
 .btn-signup {
-  @include button-variant(#fff, transparent, $navbar-active-link-color);
+  @include button-variant($font-light-color, transparent, $navbar-active-link-color);
 
   &:hover {
     background-color: $navbar-active-link-color;
-    color: #fff;
+    color: $font-light-color;
   }
 }

@@ -6,10 +6,6 @@
   }
 }
 
-.d-n {
-  display: none !important;
-}
-
 #le-dots {
   position: absolute;
   left: -100px;
@@ -28,7 +24,7 @@
 }
 
 .page-hero {
-  color: #fff;
+  color: $font-light-color;
   text-align: center;
   background-color: #1A222C;
   min-height: 535px;
@@ -41,24 +37,19 @@
   }
 
   h2 {
-    line-height: 1;
-    font-size: 44px;
-    font-weight: 300;
+    font-size: $h1-size;
     margin-top: 180px;
     position: relative;
     z-index: 50;
     text-shadow: 0 0 20px rgba(black, 0.75);
 
     @media (max-width: $grid-float-breakpoint) {
-      margin-top: 20px;
+      margin-top: 135px;
     }
   }
 
   h3 {
-    font-size: 22px;
-    line-height: $line-height-base;
     margin: 30px 0 75px 0;
-    font-weight: 300;
     position: relative;
     z-index: 50;
     text-shadow: 0 0 10px rgba(black, 0.75);
@@ -76,14 +67,13 @@
 
   h2 {
     margin: 0 0 60px 0;
-    font-weight: lighter;
-    color: #333c4e;
+    color: $font-dark-color;
   }
 
   p {
     margin: 25px 0 0;
-    color: #818a92;
-    line-height: 32px;
+    color: $font-grey-color;
+    line-height: $content-line-height;
   }
 
   .home-page-section-actions {
@@ -94,7 +84,7 @@
 // Home page
 
 .home-page {
-  font-weight: 300;
+  font-weight: $default-weight;
 
   .page-section {
     border-bottom: 1px solid #ddd;
@@ -172,15 +162,15 @@
       border: 0 none;
       max-width: 700px;
       margin: 5px auto;
-      font-size: 16px;
+      font-size: $font-size;
       color: #818a92;
-      line-height: 30px;
+      line-height: $content-line-height;
     }
 
     footer {
       margin-top: 20px;
       font-size: 16px;
-      color: #333c4f;
+      color: $font-dark-color;
 
       cite {
         font-style: normal;
@@ -203,7 +193,7 @@
 
   .page-hero {
     background-color: #f9fdff;
-    color: #333c4f;
+    color: $font-dark-color;
     padding-bottom: 75px;
 
     h2, h3 {
@@ -229,7 +219,7 @@
 
       .btn {
         min-width: 150px;
-        color: #4A90E2;
+        color: $btn-color;
       }
     }
 
@@ -247,7 +237,7 @@
     pre {
       background: transparent;
       border: 0 none;
-      color: #fff;
+      color: $font-light-color;
       font-size: 20px;
       margin: 0;
       border-radius: 0;
@@ -263,7 +253,7 @@
   .prism-page-feature-icon {
     text-align: center;
     font-size: 100px;
-    color: #818A92;
+    color: $font-grey-color;
   }
 
   .page-section {
@@ -291,7 +281,7 @@
     text-align: center;
 
     p {
-      color: #ccc;
+      color: $font-accent-color;
       margin: 25px 0;
     }
   }

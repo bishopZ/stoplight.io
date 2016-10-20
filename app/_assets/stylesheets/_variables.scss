@@ -7,8 +7,25 @@ $wide-grid-gutter-width: 50px;
 
 // Typography
 $font-family-sans-serif: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size-base: 16px;
-$line-height-base: 1.5;
+$default-weight: 300;
+
+$line-height: 1.5;
+$content-line-height: 2;
+$footer-line-height: 1.7;
+$h2-line-height: 1;
+
+$font-size: calc(0.5vw + 12px);
+$footer-size: 12px;
+$h1-size: calc(2.8vw + 12px);
+$h2-size: calc(2.2vw + 10px);
+$h3-size: calc(1.5vw + 8px);
+
+$font-light-color: #e9e9e9;
+$font-grey-color: #818a92;
+$font-dark-color: #333c4e;
+$font-accent-color: #ccc;
+$btn-color: #4A90E2;
+$brand-color: #888;
 
 // Navbar
 $navbar-height: 86px;

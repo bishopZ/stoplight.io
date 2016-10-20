@@ -7,12 +7,12 @@
   .v2-alert {
     width: 100%;
     text-align: center;
-    color: white;
+    color: $font-light-color;
     background: #4a90e2;
     padding: 8px 0;
 
     a {
-      color: white;
+      color: $font-light-color;
       text-decoration: underline;
     }
   }
@@ -26,7 +26,7 @@
   .navbar-brand {
     padding: 0 0 0 15px;
     line-height: 25px;
-    color: #fff;
+    color: $font-light-color;
     font-size: 16px;
     font-weight: 300;
     transition: color .3s ease;
@@ -52,7 +52,7 @@
       }
 
       > a {
-        color: #fff;
+        color: $font-light-color;
 
         &:hover,
         &:focus {
@@ -101,7 +101,7 @@
 .navbar-flat.affix,
 .navbar-flat.light {
   .navbar-brand {
-    color: #888;
+    color: $brand-color;
 
     img {
       &.light {
@@ -117,7 +117,7 @@
   .navbar-nav {
     > li {
       > a, .btn {
-        color: #888;
+        color: $brand-color;
 
         &:hover {
           color: $navbar-active-link-color;
@@ -126,7 +126,7 @@
 
       .btn {
         &:hover {
-          color: #fff;
+          color: $font-light-color;
         }
       }
     }

@@ -1,0 +1,21 @@
+body {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $default-weight;
+}
+
+.d-n {
+  display: none !important;
+}
+
+h2 {
+  font-size: $h2-size;
+  line-height: $h2-line-height;
+  font-weight: $default-weight;
+}
+
+h3 {
+  font-size: $h3-size;
+  line-height: $line-height;
+  font-weight: $default-weight;
+}

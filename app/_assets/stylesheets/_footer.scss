@@ -1,5 +1,5 @@
 .site-footer {
-  line-height: 1.7;
+  line-height: $footer-line-height;
   padding-bottom: 20px;
 
   .container {
@@ -50,13 +50,13 @@
   }
 
   a {
-    color: rgba(#000, .75);
-    font-size: 12px;
-    font-weight: 300;
+    color: $font-grey-color;
+    font-size: $footer-size;
+    font-weight: $default-weight;
 
     &:hover {
       text-decoration: none;
-      color: #000;
+      color: $font-dark-color;
     }
   }
 
