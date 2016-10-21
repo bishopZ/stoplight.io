@@ -29,6 +29,7 @@ var sources = {
     paths.modules + 'particles.js/particles.js',
     paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
     paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/affix.js',
+    paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
     paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
     paths.assets + 'javascripts/**/*.js'
   ],

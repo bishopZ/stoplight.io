@@ -10,6 +10,10 @@
   .site-footer-content {
     position: relative;
 
+    @media #{$mobile} {
+      text-align: center;
+    }
+
     &:before {
       content: '';
       height: 0;

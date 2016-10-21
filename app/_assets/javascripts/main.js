@@ -88,6 +88,10 @@
     "retina_detect": true
   };
 
+  $('html, body').animate({
+    scrollTop: 0,
+  }, 500);
+
   var $navbar = $('.navbar'),
       navbarHeight = $navbar.outerHeight();
 
@@ -114,9 +118,10 @@
     offset: {top: 20}
   });
 
-  $('.section-menu li a').on('click', function (e) {
+  $('.section-menu a').on('click', function (e) {
     e.preventDefault();
     $(this).tab('show');
+    $('#platform-dropdown').html($(this).text() + ' <span class="caret"></span>');
   });
 
   if (/WebKit/.test(navigator.userAgent) && $('#le-dots').length) {

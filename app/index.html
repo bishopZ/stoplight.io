@@ -9,35 +9,37 @@ layout: default
       <h2>The API Platform of Your Dreams</h2>
 
       <div class='tagline'>4 Tightly Integrated Products to Cover Your Entire API Lifecycle, From Conception to Deployment</div>
-      <div class='platform-blocks f'>
-        <a class='platform-block background-design background-design-hover f ai-c' href='/platform/design' >
-          <div class='platform-block-inner'>
-            <div class='platform-block-title'>API Designer</div>
-            <div class='platform-block-description'>Quickly model your APIs using visual tools on top of open standards.</div>
-            <div class='platform-block-learn'>Learn More</div>
-          </div>
-        </a>
-        <a class='platform-block background-docs background-docs-hover f ai-c' href='/platform/docs' >
-          <div class='platform-block-inner'>
-            <div class='platform-block-title'>Hosted Docs</div>
-            <div class='platform-block-description'>Increase customer adoption with beautiful,functional documentation.</div>
-            <div class='platform-block-learn'>Learn More</div>
-          </div>
-        </a>
-        <a class='platform-block background-scenarios background-scenarios-hover f ai-c' href='/platform/scenarios' >
-          <div class='platform-block-inner'>
-            <div class='platform-block-title'>Scenarios <span class='platform-block-tag'>BETA</span></div>
-            <div class='platform-block-description'>Test, orchestrate, and automate internal and external web services.</div>
-            <div class='platform-block-learn'>Learn More</div>
-          </div>
-        </a>
-        <a class='platform-block background-prism background-prism-hover f ai-c' href='/platform/prism' >
-          <div class='platform-block-inner'>
-            <div class='platform-block-title'>Prism</div>
-            <div class='platform-block-description'>Easily mock web services, and run scenarios from the command line.</div>
-            <div class='platform-block-learn'>Learn More</div>
-          </div>
-        </a>
+      <div class='platform-blocks'>
+        <div class='platform-blocks-content f'>
+          <a class='platform-block background-design background-design-hover f ai-c' href='/platform/design' >
+            <div class='platform-block-inner'>
+              <div class='platform-block-title'>API Designer</div>
+              <div class='platform-block-description'>Quickly model your APIs using visual tools on top of open standards.</div>
+              <div class='platform-block-learn'>Learn More</div>
+            </div>
+          </a>
+          <a class='platform-block background-docs background-docs-hover f ai-c' href='/platform/docs' >
+            <div class='platform-block-inner'>
+              <div class='platform-block-title'>Hosted Docs</div>
+              <div class='platform-block-description'>Increase customer adoption with beautiful,functional documentation.</div>
+              <div class='platform-block-learn'>Learn More</div>
+            </div>
+          </a>
+          <a class='platform-block background-scenarios background-scenarios-hover f ai-c' href='/platform/scenarios' >
+            <div class='platform-block-inner'>
+              <div class='platform-block-title'>Scenarios <span class='platform-block-tag'>BETA</span></div>
+              <div class='platform-block-description'>Test, orchestrate, and automate internal and external web services.</div>
+              <div class='platform-block-learn'>Learn More</div>
+            </div>
+          </a>
+          <a class='platform-block background-prism background-prism-hover f ai-c' href='/platform/prism' >
+            <div class='platform-block-inner'>
+              <div class='platform-block-title'>Prism</div>
+              <div class='platform-block-description'>Easily mock web services, and run scenarios from the command line.</div>
+              <div class='platform-block-learn'>Learn More</div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
     <div id='le-dots'></div>
@@ -80,14 +82,31 @@ layout: default
       <h3>A Platform For The Entire Team</h3>
 
       <div class='section-menu'>
-        <ul class='f jc-c' role='tablist'>
-           <li role='presentation' class='active'><a href='#everybody' aria-controls='everybody' role='tab' data-toggle='tab'>Everybody</a></li>
-           <li role='presentation'><a href='#writers' aria-controls='writers' role='tab' data-toggle='tab'>Writers</a></li>
-           <li role='presentation'><a href='#qa' aria-controls='qa' role='tab' data-toggle='tab'>QA</a></li>
-           <li role='presentation'><a href='#fe-be' aria-controls='fe-be' role='tab' data-toggle='tab'>Frontend / Backend</a></li>
-           <li role='presentation'><a href='#devops' aria-controls='devops' role='tab' data-toggle='tab'>DevOps</a></li>
-           <li role='presentation'><a href='#support' aria-controls='support' role='tab' data-toggle='tab'>Support</a></li>
-         </ul>
+        <ul class='hidden-xs'>
+          <li role='presentation' class='active'><a href='#everybody' aria-controls='everybody' role='tab' data-toggle='tab'>Everybody</a></li>
+          <li role='presentation'><a href='#writers' aria-controls='writers' role='tab' data-toggle='tab'>Writers</a></li>
+          <li role='presentation'><a href='#qa' aria-controls='qa' role='tab' data-toggle='tab'>QA</a></li>
+          <li role='presentation'><a href='#fe-be' aria-controls='fe-be' role='tab' data-toggle='tab'>Frontend / Backend</a></li>
+          <li role='presentation'><a href='#devops' aria-controls='devops' role='tab' data-toggle='tab'>DevOps</a></li>
+          <li role='presentation'><a href='#support' aria-controls='support' role='tab' data-toggle='tab'>Support</a></li>
+        </ul>
+
+        <div class="platform-dropdown visible-xs pos-r mb-1">
+          <button id="platform-dropdown" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Everybody
+            <span class="caret"></span>
+          </button>
+
+          <ul class="dropdown-menu"  aria-labelledby="platform-dropdown">
+            <div><a href='#everybody' aria-controls='everybody' role='tab' data-toggle='tab'>Everybody</a></div>
+            <div><a href='#writers' aria-controls='writers' role='tab' data-toggle='tab'>Writers</a></div>
+            <div><a href='#qa' aria-controls='qa' role='tab' data-toggle='tab'>QA</a></div>
+            <div><a href='#fe-be' aria-controls='fe-be' role='tab' data-toggle='tab'>Frontend / Backend</a></div>
+            <div><a href='#devops' aria-controls='devops' role='tab' data-toggle='tab'>DevOps</a></div>
+            <div><a href='#support' aria-controls='support' role='tab' data-toggle='tab'>Support</a></div>
+          </ul>
+        </div>
+
 
          <div class='section-menu-content tab-content'>
            <div role='tabpanel' class='tab-pane active' id='everybody'>
