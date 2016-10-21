@@ -391,19 +391,26 @@ blockquote {
 .section-menu {
   width: 100%;
   max-width: 1000px;
-  margin: auto;
+  margin: 50px auto;
+  font-size: 18px;
 
   ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 90px;
 
     li {
       margin: 0 20px;
-      padding: 10px;
+      cursor: pointer;
+      position: relative;
+      text-align: center;
 
       a {
         text-decoration: none;
         color: rgba(black, 0.5);
+        display: block;
+        padding: 10px;
+        font-weight: bold;
       }
 
       &:hover, &.active {
@@ -417,8 +424,32 @@ blockquote {
 
       &.active:after {
         content: '\25BC';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 35px;
+        color: $background-design;
       }
     }
+  }
+}
+
+.section-menu-content {
+  text-align: center;
+}
+
+.section-menu-tagline {
+  color: #4B4B4B;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.section-menu-image {
+  margin: 20px 0;
+
+  img {
+    box-shadow: 0 0 4px 0 rgba(black, 0.5);
   }
 }
 

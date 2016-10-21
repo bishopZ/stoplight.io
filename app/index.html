@@ -77,36 +77,28 @@ layout: default
 
   <section class='page-section' id='how-its-used'>
     <div class='container'>
-      <div>
-        <h3>A Platform For The Entire Team</h3>
-        <div class='section-menu'>
-          <ul class='f jc-c'>
-            <li class='active'>
-              <a href=''>Everybody</a>
-            </li>
-            <li>
-              <a>Writers</a>
-            </li>
-            <li>
-              <a>QA</a>
-            </li>
-            <li>
-              <a>Frontend / Backend</a>
-            </li>
-            <li>
-              <a>DevOps</a>
-            </li>
-            <li>
-              <a>Support</a>
-            </li>
-          </ul>
-        </div>
+      <h3>A Platform For The Entire Team</h3>
 
-        <div class='ta-c'>
-          <div>The single point of truth for all of your web services, accessible by the entire organization.</div>
-          <div><img src='' alt='' /></div>
+      <div class='section-menu'>
+        <ul class='f jc-c' role='tablist'>
+           <li role='presentation' class='active'><a href='#everybody' aria-controls='everybody' role='tab' data-toggle='tab'>Everybody</a></li>
+           <li role='presentation'><a href='#writers' aria-controls='writers' role='tab' data-toggle='tab'>Writers</a></li>
+           <li role='presentation'><a href='#qa' aria-controls='qa' role='tab' data-toggle='tab'>QA</a></li>
+           <li role='presentation'><a href='#fe-be' aria-controls='fe-be' role='tab' data-toggle='tab'>Frontend / Backend</a></li>
+           <li role='presentation'><a href='#devops' aria-controls='devops' role='tab' data-toggle='tab'>DevOps</a></li>
+           <li role='presentation'><a href='#support' aria-controls='support' role='tab' data-toggle='tab'>Support</a></li>
+         </ul>
+
+         <div class='section-menu-content tab-content'>
+           <div role='tabpanel' class='tab-pane active' id='everybody'>
+             <div class='section-menu-tagline'>The single point of truth for all of your web services, accessible by the entire organization.</div>
+             <div class='section-menu-image'><img src='/assets/img/everybody-example.png' alt='' /></div>
+           </div>
+           <div role='tabpanel' class='tab-pane' id='writers'>...</div>
+           <div role='tabpanel' class='tab-pane' id='qa'>...</div>
+           <div role='tabpanel' class='tab-pane' id='support'>...</div>
+         </div>
         </div>
-      </div>
     </div>
   </section>
 

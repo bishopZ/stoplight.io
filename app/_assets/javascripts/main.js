@@ -114,6 +114,11 @@
     offset: {top: 20}
   });
 
+  $('.section-menu li a').on('click', function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+  });
+
   if (/WebKit/.test(navigator.userAgent) && $('#le-dots').length) {
     particlesJS('le-dots', particleConfig);
   }
@@ -173,7 +178,7 @@
 
       if (localStorage['utm_medium']) {
         params += '&utm_medium=' + localStorage['utm_medium'];
-      } else {
+      } else if ($(this).data('medium')) {
         params += '&utm_medium=' + $(this).data('medium');
       }
 
