@@ -1,3 +1,9 @@
+.nav-dropdown:hover {
+  > .dropdown-menu {
+    display: block;
+  }
+}
+
 .navbar {
   .container {
     width: 100%;
@@ -27,8 +33,8 @@
     padding: 0 0 0 15px;
     line-height: 25px;
     color: #fff;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: bold;
     transition: color .3s ease;
 
     img {
@@ -47,7 +53,7 @@
     > li {
       > a, .btn {
         transition: color .3s ease;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 300;
       }
 

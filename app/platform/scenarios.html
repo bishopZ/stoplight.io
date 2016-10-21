@@ -1,0 +1,217 @@
+---
+title: Scenarios
+layout: default
+header_theme: light
+excerpt: The perfect OAS (Swagger) companion. Supercharge any OAS file with mocking, transformations, validations, and more.
+image: https://stoplight.io/assets/img/prism.png
+---
+
+<div class="page prism-page">
+  <div class="page-hero">
+    <div class="container">
+      <h2>Prism. The perfect OAS (Swagger) companion.</h2>
+      <h3>Supercharge any OAS file with mocking, transformations, validations, and more.</h3>
+
+      <div class="page-hero-binaries row">
+        <div class="col-md-4">
+          <div class="fa fa-linux"></div>
+          <p>
+            <a href="https://github.com/stoplightio/prism/releases/download/v0.2.7/prism_linux_amd64" class="btn btn-default">Linux 64-bit</a>
+          </p>
+          <p>
+            <a href="https://github.com/stoplightio/prism/releases/download/v0.2.7/prism_linux_386" class="btn btn-default">Linux 32-bit</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <div class="fa fa-apple"></div>
+          <p>
+            <a href="https://github.com/stoplightio/prism/releases/download/v0.2.7/prism_darwin_amd64" class="btn btn-default">OS X 64-bit</a>
+          </p>
+          <p>
+            <a href="https://github.com/stoplightio/prism/releases/download/v0.2.7/prism_darwin_386" class="btn btn-default">OS X 32-bit</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <div class="fa fa-windows"></div>
+          <p>
+            <a href="https://github.com/stoplightio/prism/releases/download/v0.2.7/prism_windows_amd64.exe" class="btn btn-default">Windows 64-bit</a>
+          </p>
+          <p>
+            <a href="https://github.com/stoplightio/prism/releases/download/v0.2.7/prism_windows_386.exe" class="btn btn-default">Windows 32-bit</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-hero-version">
+      <a href="https://github.com/stoplightio/prism/releases">v{{site.prism_version}} - {{site.prism_last_updated}}</a>
+      <br />
+      Follow <a href='https://stoplight.io/twitter' target='_blank'>@stoplightio</a> to hear about new releases.
+    </div>
+  </div>
+
+  <div class="run-code-example">
+    <pre><code>./prism run --mock --list --spec http://petstore.swagger.io/v2/swagger.json</code></pre>
+  </div>
+
+  <section class="page-section" id="instant-mock-server">
+    <div class="container">
+      <div class="row table-row">
+        <div class="col-md-6 text-right">
+          <h2>Instant Mock Server</h2>
+          <p>Starting Prism with the --mock flag will create a mock server,
+            built off of the given OAS specification file.</p>
+          <p>If a request comes in for a response without a defined example,
+            Prism will dynamically generate a response based on the response’s
+            schema.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="prism-page-feature-icon">
+            <span class="fa fa-bolt"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="automatic-request-validation">
+    <div class="container">
+      <div class="row table-row">
+        <div class="col-md-6">
+          <div class="prism-page-feature-icon">
+            <span class="fa fa-lock"></span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Automatic Request Validation</h2>
+          <p>Simulates real server behavior by automatically validating incoming
+            request headers, query string, and bodies, against your OAS
+            specification.</p>
+          <p>If validation fails, Prism will return a 400 response with helpful
+            error messages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="request-transformations">
+    <div class="container">
+      <div class="row table-row">
+        <div class="col-md-6 text-right">
+          <h2>Request Transformations</h2>
+          <p>Need a mocked response property to always be a random future date?
+            No problem. Prism extends the swagger spec with simple scripts,
+            written in plain Javascript.</p>
+          <p>Write scripts for more complex mocking behavior, custom
+            validations, and much more. You can even use Prism as a full blown
+            network proxy, and setup scripts to block access to certain
+            websites.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="prism-page-feature-icon">
+            <span class="fa fa-code"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="simple-and-free">
+    <div class="container">
+      <div class="row table-row">
+        <div class="col-md-6">
+          <div class="prism-page-feature-icon">
+            <span class="fa fa-magic"></span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Simple &amp; Free</h2>
+          <p>Prism was born out of the StopLight modeling tools, and is
+            integrated into the StopLight API Designer. Running it standalone is
+            completely free, and since it has zero dependencies, extremely
+            simple!</p>
+          <p>Just download and run it from your command line. Easy as 1..2..</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="features">
+    <div class="container">
+      <h2 class="text-center">Features</h2>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Mocking</h4>
+          <p>Turns any OAS file into a <br> mock server.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>List</h4>
+          <p>Pretty print the paths of any OAS file to your terminal.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Spec Validation</h4>
+          <p>Validate any OAS file from your<br>terminal.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Dynamic Responses</h4>
+          <p>Generates responses from your JSON schemas.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>HTTP Validation</h4>
+          <p>Validates requests / responses against your OAS definition.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Before Scripts</h4>
+          <p>Simple JS scripts invoked before traffic reaches your server.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Logging</h4>
+          <p>Optionally log traffic to an HTTP location, or MongoDB.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Hot Reload</h4>
+          <p>Automatically reloads when your spec file changes.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>After Scripts</h4>
+          <p>Simple JS scripts invoked on traffic returning from your
+            server.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Full Proxy</h4>
+          <p>Can be used as a system-wide <br> proxy.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>MITM</h4>
+          <p>Can be used as a MITM proxy, with HTTPS traffic.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Dependency Free</h4>
+          <p>Just download and run. Prism has no external requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="get-started">
+    <div class="container">
+      <a href="#top" class="btn btn-lg btn-stoplight animated-scroll">DOWNLOAD</a>
+
+      <p>and</p>
+
+      <a href="https://app.stoplight.io/docs/prism"
+         class="btn btn-lg btn-stoplight animated-scroll"
+         target="_blank" data-medium='prism-learn'>LEARN</a>
+    </div>
+  </section>
+</div>

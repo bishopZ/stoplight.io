@@ -16,3 +16,56 @@ $navbar-height: 86px;
 // Container
 $container-desktop: 1050px;
 $container-large-desktop: 1050px;
+
+$background-design: #4A90E2;
+$background-docs: #1ABC9C;
+$background-scenarios: #9B59B6;
+$background-prism: #313841;
+
+.background-design {
+  color: white;
+  background-color: $background-design !important;
+}
+.background-design-hover {
+  &:focus, &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgba($background-design, 0.8) !important;
+  }
+}
+
+.background-docs {
+  color: white;
+  background-color: $background-docs !important;
+}
+.background-docs-hover {
+  &:focus, &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgba($background-docs, 0.8) !important;
+  }
+}
+
+.background-scenarios {
+  color: white;
+  background-color: $background-scenarios !important;
+}
+.background-scenarios-hover {
+  &:focus, &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgba($background-scenarios, 0.8) !important;
+  }
+}
+
+.background-prism {
+  color: white;
+  background-color: $background-prism !important;
+}
+.background-prism-hover {
+  &:focus, &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgba($background-prism, 0.8) !important;
+  }
+}
