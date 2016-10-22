@@ -497,6 +497,11 @@ blockquote {
 
 .platform-dropdown {
   border-bottom: 1px solid rgba(black, 0.2);
+
+  a {
+    text-decoration: none !important;
+    color: initial;
+  }
 }
 
 .page-image {
