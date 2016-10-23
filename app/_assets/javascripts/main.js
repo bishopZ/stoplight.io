@@ -22,7 +22,7 @@
         }
       },
       "opacity": {
-        "value": 0.3,
+        "value": 0.2,
         "random": false,
         "anim": {
           "enable": false,
@@ -45,12 +45,12 @@
         "enable": true,
         "distance": 100,
         "color": "#fff",
-        "opacity": 0.5,
+        "opacity": 0.3,
         "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 2,
+        "speed": 1,
         "direction": "none",
         "random": false,
         "straight": false,

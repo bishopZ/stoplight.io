@@ -2,7 +2,7 @@
   padding-top: $navbar-height;
 
   section {
-    padding: 90px 0;
+    padding: 80px 0;
   }
 }
 
@@ -41,13 +41,17 @@
     margin-top: -$navbar-height;
   }
 
+  h2,
+  .tagline {
+    position: relative;
+    z-index: 50;
+  }
+
   h2 {
     line-height: 1;
     font-size: 30px;
     font-weight: bold;
-    margin: 100px 0;
-    position: relative;
-    z-index: 50;
+    margin: 135px 0 150px 0;
 
     @media (max-width: $grid-float-breakpoint) {
       margin-top: 20px;
@@ -73,7 +77,7 @@
 
 .page-section {
   overflow: hidden;
-  padding: 90px 0;
+  padding: 80px 0;
   background-color: #F9F9F9;
   border-bottom: 1px solid #ddd;
 
@@ -83,6 +87,8 @@
 
   h3 {
     text-align: center;
+    font-weight: bold;
+    margin: 0 0 10px 0;
   }
 }
 
@@ -228,6 +234,7 @@ blockquote {
 
 .container {
   width: 100%;
+  position: relative;
 }
 
 .prism-page {
@@ -330,14 +337,13 @@ blockquote {
 }
 
 .tagline {
-  color: rgba(white, 0.75);
+  color: rgba(white, 0.85);
   font-size: 18px;
 }
 
 .platform-blocks {
   width: 100%;
   margin: 40px 0 80px;
-  overflow-x: auto;
 }
 
 .platform-blocks-content {
@@ -345,14 +351,49 @@ blockquote {
   margin: 0 auto;
 }
 
+@keyframes blockIntro {
+  from {
+    bottom: -20px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
 .platform-block {
   margin: 0 10px;
-  padding: 0 30px;
+  padding: 0 20px 0 25px;
   z-index: 50;
   border-radius: 2px;
   text-align: left;
-  height: 200px;
-  width: 250px;
+  height: 190px;
+  width: 230px;
+  transition: all 0.25s;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  bottom: -20px;
+
+  animation-name: blockIntro;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    margin-top: -3px;
+  }
+  &.block-one {
+    animation-delay: 1s;
+  }
+  &.block-two {
+    animation-delay: 1.25s;
+  }
+  &.block-three {
+    animation-delay: 1.5s;
+  }
+  &.block-four {
+    animation-delay: 1.75s;
+  }
 }
 
 .platform-block-title {
@@ -376,8 +417,50 @@ blockquote {
   font-weight: bold;
 }
 
+.platform-block-triangle {
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+
+  &.triangle-one {
+    border-left-width: 80px;
+    border-right-width: 80px;
+    border-bottom-width: 80px ;
+    top: -20px;
+    right: -70px;
+    transform: rotate(55deg);
+  }
+  &.triangle-two {
+    border-left-width: 170px;
+    border-right-width: 70px;
+    border-bottom-width: 130px;
+    top: 80px;
+    right: -90px;
+    transform: rotate(70deg);
+  }
+  &.triangle-three {
+    border-left-width: 20px;
+    border-right-width: 70px;
+    border-bottom-width: 130px;
+    bottom: -82px;
+    left: -27px;
+    transform: rotate(171deg);
+  }
+  &.triangle-four {
+    border-left-width: 80px;
+    border-right-width: 60px;
+    border-bottom-width: 70px ;
+    top: -20px;
+    right: -30px;
+    transform: rotate(192deg);
+  }
+}
+
 .section-tagline {
-  font-size: 14px;
+  font-size: 15px;
   color: rgba(black, 0.5);
   margin-bottom: 50px;
   text-align: center;
@@ -420,7 +503,7 @@ blockquote {
 .section-menu {
   width: 100%;
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   font-size: 18px;
   text-align: center;
 
@@ -436,11 +519,11 @@ blockquote {
   ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 90px;
+    margin-bottom: 30px;
     text-align: center;
 
     li {
-      margin: 0 20px;
+      margin: 0 15px;
       cursor: pointer;
       position: relative;
       text-align: center;
@@ -450,12 +533,12 @@ blockquote {
         text-decoration: none;
         color: rgba(black, 0.5);
         display: block;
-        padding: 10px;
+        padding: 7px 12px;
         font-weight: bold;
       }
 
       &:hover, &.active {
-        background-color: $background-design;
+        background-color: #76AAE8;
         border-radius: 2px;
 
         a {
@@ -468,8 +551,8 @@ blockquote {
         position: absolute;
         left: 0;
         right: 0;
-        top: 35px;
-        color: $background-design;
+        bottom: -15px;
+        color: #76AAE8;
       }
     }
   }
@@ -477,21 +560,21 @@ blockquote {
 
 .section-menu-content {
   text-align: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
 }
 
 .section-menu-tagline {
-  color: #4B4B4B;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 12px 0 25px 15px;
+  text-align: left;
 }
 
 .section-menu-image {
-  margin: 20px 0;
-
   img {
     width: 100%;
-    box-shadow: 0 0 4px 0 rgba(black, 0.5);
+    border: 1px solid #ddd;
   }
 }
 

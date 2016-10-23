@@ -11,32 +11,37 @@ layout: default
       <div class='tagline'>4 Tightly Integrated Products to Cover Your Entire API Lifecycle, From Conception to Deployment</div>
       <div class='platform-blocks'>
         <div class='platform-blocks-content f'>
-          <a class='platform-block background-design background-design-hover f ai-c' href='/platform/design' >
+          <a class='platform-block background-design background-design-hover f ai-c block-one' href='/platform/design' >
             <div class='platform-block-inner'>
               <div class='platform-block-title'>API Designer</div>
               <div class='platform-block-description'>Quickly model your APIs using visual tools on top of open standards.</div>
               <div class='platform-block-learn'>Learn More</div>
             </div>
+
+            <div class='platform-block-triangle triangle-one'></div>
           </a>
-          <a class='platform-block background-docs background-docs-hover f ai-c' href='/platform/docs' >
+          <a class='platform-block background-docs background-docs-hover f ai-c block-two' href='/platform/docs' >
             <div class='platform-block-inner'>
               <div class='platform-block-title'>Hosted Docs</div>
-              <div class='platform-block-description'>Increase customer adoption with beautiful,functional documentation.</div>
+              <div class='platform-block-description'>Increase customer adoption with beautiful, functional documentation.</div>
               <div class='platform-block-learn'>Learn More</div>
+              <div class='platform-block-triangle triangle-two'></div>
             </div>
           </a>
-          <a class='platform-block background-scenarios background-scenarios-hover f ai-c' href='/platform/scenarios' >
+          <a class='platform-block background-scenarios background-scenarios-hover f ai-c block-three' href='/platform/scenarios' >
             <div class='platform-block-inner'>
               <div class='platform-block-title'>Scenarios <span class='platform-block-tag'>BETA</span></div>
               <div class='platform-block-description'>Test, orchestrate, and automate internal and external web services.</div>
               <div class='platform-block-learn'>Learn More</div>
+              <div class='platform-block-triangle triangle-three'></div>
             </div>
           </a>
-          <a class='platform-block background-prism background-prism-hover f ai-c' href='/platform/prism' >
+          <a class='platform-block background-prism background-prism-hover f ai-c block-four' href='/platform/prism' >
             <div class='platform-block-inner'>
               <div class='platform-block-title'>Prism</div>
               <div class='platform-block-description'>Easily mock web services, and run scenarios from the command line.</div>
               <div class='platform-block-learn'>Learn More</div>
+              <div class='platform-block-triangle triangle-four'></div>
             </div>
           </a>
         </div>
@@ -49,12 +54,12 @@ layout: default
     <ul>
       <li>
         <a href='/#sendgrid' class='animated-scroll'>
-          <img src='https://cdn.stoplight.io/stoplightio/sendgrid.png' alt='SendGrid' height='40'>
+          <img src='https://cdn.stoplight.io/stoplightio/sendgrid.png' alt='SendGrid' height='35'>
         </a>
       </li>
       <li>
         <a href='/#tmdb' class='animated-scroll'>
-          <img src='https://cdn.stoplight.io/stoplightio/tmdb.png' alt='tMDB' height='40'>
+          <img src='https://cdn.stoplight.io/stoplightio/tmdb.png' alt='tMDB' height='35'>
         </a>
       </li>
       <li>
@@ -64,12 +69,12 @@ layout: default
       </li>
       <li>
         <a href='/#chargify' class='animated-scroll'>
-          <img src='https://cdn.stoplight.io/stoplightio/chargify.png' alt='Chargify' height='40'>
+          <img src='https://cdn.stoplight.io/stoplightio/chargify.png' alt='Chargify' height='35'>
         </a>
       </li>
       <li>
         <a href='/#vmware' class='animated-scroll'>
-          <img src='https://cdn.stoplight.io/stoplightio/vmware.png' alt='VMWare' height='30'>
+          <img src='https://cdn.stoplight.io/stoplightio/vmware.png' alt='VMWare' height='25'>
         </a>
       </li>
     </ul>
@@ -107,17 +112,69 @@ layout: default
           </ul>
         </div>
 
+        <div class='section-menu-content tab-content'>
+          <div role='tabpanel' class='tab-pane active' id='everybody'>
+            <div class='section-menu-tagline'>
+              Get your entire organization on the same page, and involved in your API strategy. Stoplight is the single point of truth for all of your web services.
+            </div>
+            <div class='section-menu-image'><img src='/assets/img/everybody-example.png' alt='' /></div>
+          </div>
 
-         <div class='section-menu-content tab-content'>
-           <div role='tabpanel' class='tab-pane active' id='everybody'>
-             <div class='section-menu-tagline'>The single point of truth for all of your web services, accessible by the entire organization.</div>
-             <div class='section-menu-image'><img src='/assets/img/everybody-example.png' alt='' /></div>
-           </div>
-           <div role='tabpanel' class='tab-pane' id='writers'>...</div>
-           <div role='tabpanel' class='tab-pane' id='qa'>...</div>
-           <div role='tabpanel' class='tab-pane' id='support'>...</div>
-         </div>
+          <div role='tabpanel' class='tab-pane' id='writers'>
+            <div class='section-menu-tagline'>
+              You don't have to be technical to write first-class technical documentation. Use Stoplight's visual
+              editors + markdown to create beautiful documentation, and then publish it with our
+              hosted docs product.
+              <br /><br />
+              <a href='/platform/docs'>Read about the API Designer.</a>
+              <br />
+              <a href='/platform/docs'>Read about Hosted Docs.</a>
+            </div>
+            <div class='section-menu-image'><img src='/assets/img/writers-example.png' alt='' /></div>
+          </div>
+          <div role='tabpanel' class='tab-pane' id='qa'>
+            <div class='section-menu-tagline'>
+              Use Stoplight Scenarios to quickly build robust test suites for your web services. Leverage your
+              API design to do contract testing.
+              <br /><br />
+              <a href='/platform/design'>Read about the API Designer.</a>
+              <br />
+              <a href='/platform/scenarios'>Read about Scenarios.</a>
+            </div>
+            <div class='section-menu-image'><img src='/assets/img/qa-example.png' alt='' /></div>
+          </div>
+          <div role='tabpanel' class='tab-pane' id='fe-be'>
+            <div class='section-menu-tagline'>
+              Improve efficiency, and unblock your development teams by making sure frontend and backend developers
+              are building to the same spec. Instant mock servers and contract testing ensure everybody is on the same
+              page.
+              <br /><br />
+              <a href='/platform/design'>Read about the API Designer.</a>
+            </div>
+            <div class='section-menu-image'><img src='/assets/img/fe-be-example.png' alt='' /></div>
+          </div>
+          <div role='tabpanel' class='tab-pane' id='devops'>
+            <div class='section-menu-tagline'>
+              Automate processes, and run tests, with Stoplight scenarios. Deploy and trigger those scenarios with a simple
+              GET request, or run them from the command line with Prism.
+              <br /><br />
+              <a href='/platform/scenarios'>Read about Scenarios.</a>
+              <br />
+              <a href='/platform/prism'>Read about Prism.</a>
+            </div>
+            <div class='section-menu-image'><img src='/assets/img/devops-example.png' alt='' /></div>
+          </div>
+          <div role='tabpanel' class='tab-pane' id='support'>
+            <div class='section-menu-tagline'>
+              Reduce the time per ticket with better API debug tools. Support teams use Stoplight Scenarios to
+              reproduce customer issues, and share these issues with engineering.
+              <br /><br />
+              <a href='/platform/scenarios'>Read about Scenarios.</a>
+            </div>
+            <div class='section-menu-image'><img src='/assets/img/support-example.png' alt='' /></div>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 
