@@ -1,0 +1,51 @@
+.timeline {
+  border-top: 1px solid purple;
+}
+
+.timeline-content {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.timeline-left {
+  border-right: 1px solid purple;
+}
+
+.timeline-left, .timeline-right {
+  padding: 50px;
+  width: 50%;
+}
+
+.timeline-image {
+  background-size: cover;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: purple;
+}
+
+.timeline-title-dot {
+  position: absolute;
+  top: -5px;
+  right: -69px;
+  background: white;
+  height: 36px;
+  width: 36px;
+  border: 1px solid purple;
+  border-radius: 50%;
+}
+}
+
+.timeline-feature-title {
+  font-weight: bold;
+}
+
+.timeline-feature-info {
+  width: 60%;
+}

@@ -25,16 +25,17 @@ image: https://stoplight.io/assets/img/prism.png
       <li>API Discovery</li>
       <li class='divider'></li>
       <li>Contract Testing</li>
-    </ul>
+    </ul>f
   </div>
 
   {% include download.html %}
+  {% include register-beta.html %}
 
-  <div id='vue-test'>
-    <p>
-      ${message}
-    </p>
-    <feature-row v-for="feature in features" :feature="feature"></feature-row>
+  <div id='vue-timeline' class='timeline'>
+    <div class='timeline-content f jc-c'>
+      <timeline-left class='timeline-left ta-r' v-for='info in left' :info='info'></timeline-left>
+      <timeline-right class='timeline-right ta-l' v-for='info in right' :info='info'></timeline-right>
+    </div>
   </div>
 
   <section class='page-section'>
