@@ -35,7 +35,7 @@ Vue.component('timeline-right', {
 });
 
 var app = new Vue({
-  el: '#vue-timeline',
+  el: '#scenarios',
 
   // this is required if we need to use {{foo}} directly in the .html page
   // we must do ${foo} instead of {{foo}} because jekyll uses {{}} syntax already
@@ -204,5 +204,22 @@ var app = new Vue({
         }],
       }
     ],
+  },
+
+  methods: {
+    addToBeta: function (event) {
+      event.preventDefault();
+
+      var buttons = document.getElementsByClassName('register-beta-button') || [];
+      var inputs = document.getElementsByClassName('register-beta-input') || [];
+
+      for (var el of buttons) {
+        el.setAttribute('disabled', 'disabled');
+      };
+
+      for (var el of inputs) {
+        el.setAttribute('disabled', 'disabled');
+      };
+    }
   },
 });

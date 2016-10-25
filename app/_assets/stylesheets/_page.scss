@@ -91,7 +91,6 @@
 
   h3 {
     text-align: center;
-    font-weight: bold;
     margin: 0 0 10px 0;
   }
 }
@@ -275,7 +274,7 @@ blockquote {
 
       .btn {
         min-width: 150px;
-        color: #4A90E2;
+        color: $background-design;
       }
     }
 
