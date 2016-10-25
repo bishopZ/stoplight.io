@@ -31,6 +31,9 @@ image: https://stoplight.io/assets/img/prism.png
   {% include download.html %}
 
   <div id='vue-test'>
+    <p>
+      ${message}
+    </p>
     <feature-row v-for="feature in features" :feature="feature"></feature-row>
   </div>
 

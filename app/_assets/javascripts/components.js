@@ -17,6 +17,7 @@ var app = new Vue({
   delimiters: ['${', '}'],
 
   data: {
+    message: 'Howdy!',
     features: [{
       title: 'foo',
     }, {
