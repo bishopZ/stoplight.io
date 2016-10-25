@@ -10,9 +10,7 @@ image: https://stoplight.io/assets/img/prism.png
     <div class="container">
       <h2>Model APIs Faster With The Stoplight API Designer</h2>
 
-      <div class='page-image'>
-        <img src='/assets/img/app-designer.png' alt='' />
-      </div>
+      <img class='page-image' src='https://cdn.stoplight.io/stoplightio/scenarios-hero.png' alt='' />
     </div>
   </div>
 
@@ -31,6 +29,10 @@ image: https://stoplight.io/assets/img/prism.png
   </div>
 
   {% include download.html %}
+
+  <div id='vue-test'>
+    <feature-row v-for="feature in features" :feature="feature"></feature-row>
+  </div>
 
   <section class='page-section'>
     <div class='container'>
