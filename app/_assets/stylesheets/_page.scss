@@ -589,11 +589,15 @@ blockquote {
 
 .page-image {
   height: 400px;
-  margin-top: -50px;
+  width: 1000px;
+  margin: -50px auto 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
 
   @media #{$mobile} {
-    img {
-      width: 100%;
-    }
+    width: 100%;
+    background-position: 0;
+    background-size: contain;
   }
 }
