@@ -1,50 +1,135 @@
+$borderSize: 2px;
+$borderColor: purple;
+
 .timeline {
-  border-top: 1px solid purple;
+  border-top: $borderSize solid $borderColor;
+  border-bottom: $borderSize solid $borderColor;
 }
 
 .timeline-content {
   max-width: 1400px;
   margin: auto;
-}
 
-.timeline-left {
-  border-right: 1px solid purple;
+  @media #{$mobile} {
+    padding: 20px;
+  }
 }
 
 .timeline-left, .timeline-right {
-  padding: 50px;
   width: 50%;
+
+  @media #{$mobile} {
+    width: 100%;
+  }
+}
+
+.timeline-block {
+  @media #{$mobile} {
+    padding: 10px 0;
+  }
+}
+
+.timeline-left {
+  border-right: $borderSize solid $borderColor;
+  padding-right: 50px;
+
+  @media #{$mobile} {
+    padding: 0;
+    border: none;
+  }
+}
+
+.timeline-right {
+  padding-left: 50px;
+
+  @media #{$mobile} {
+    padding: 0;
+  }
+}
+
+
+.timeline-left-block, .timeline-right-block {
+  padding: 50px 0;
+
+  @media #{$mobile} {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.timeline-title {
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: $borderColor;
+  position: relative;
+  margin-top: 50px;
+
+  @media #{$mobile} {
+    height: auto;
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 .timeline-image {
   background-size: cover;
-  height: 350px;
-  width: 350px;
   border-radius: 50%;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+
+  @media #{$mobile} {
+    display: none;
+  }
 }
 
-.timeline-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: purple;
+.timeline-feature-info, .timeline-image {
+  height: 350px;
+  width: 350px;
+  position: relative;
+
+  @media #{$mobile} {
+    height: auto;
+    width: auto;
+    margin: auto;
+    padding: 10px;
+  }
 }
 
 .timeline-title-dot {
   position: absolute;
-  top: -5px;
+  top: 0;
   right: -69px;
   background: white;
   height: 36px;
   width: 36px;
-  border: 1px solid purple;
+  border: $borderSize solid $borderColor;
   border-radius: 50%;
+
+  @media #{$mobile} {
+    display: none;
+  }
 }
 
 .timeline-feature-title {
   font-weight: bold;
+  padding-bottom: 10px;
 }
 
-.timeline-feature-info {
-  width: 60%;
+.timeline-info-dot-right, .timeline-info-dot-left {
+  position: absolute;
+  font-size: 47px;
+  color: $borderColor;
+
+  @media #{$mobile} {
+    display: none;
+  }
+}
+
+.timeline-info-dot-right {
+  right: -67px;
+}
+
+.timeline-info-dot-left {
+  left: -67px;
 }

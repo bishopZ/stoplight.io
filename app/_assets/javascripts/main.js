@@ -88,6 +88,10 @@
     "retina_detect": true
   };
 
+  if (/WebKit/.test(navigator.userAgent) && $('#le-dots').length) {
+    particlesJS('le-dots', particleConfig);
+  }
+
   $('html, body').animate({
     scrollTop: 0,
   }, 500);
@@ -123,10 +127,6 @@
     $(this).tab('show');
     $('#platform-dropdown').html($(this).text() + ' <span class="caret"></span>');
   });
-
-  if (/WebKit/.test(navigator.userAgent) && $('#le-dots').length) {
-    particlesJS('le-dots', particleConfig);
-  }
 
   (function() {
     location.queryString = {};

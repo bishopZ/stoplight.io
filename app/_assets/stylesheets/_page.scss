@@ -3,6 +3,10 @@
 
   section {
     padding: 80px 0;
+
+    @media #{$mobile} {
+      padding: 40px 0;
+    }
   }
 }
 
@@ -53,8 +57,8 @@
     font-weight: bold;
     margin: 135px 0 150px 0;
 
-    @media (max-width: $grid-float-breakpoint) {
-      margin-top: 20px;
+    @media #{$mobile} {
+      margin: 55px 0;
     }
   }
 
@@ -95,6 +99,10 @@
 .page-section-content {
   margin: 90px auto 0;
   max-width: 1000px;
+
+  @media #{$mobile} {
+    margin: 15px auto 0;
+  }
 }
 
 .page-section-content-items {
@@ -186,7 +194,6 @@
 
     @media #{$mobile} {
       display: block;
-      width: 100%;
       margin: 0;
       padding: 0;
     }
@@ -497,6 +504,10 @@ blockquote {
     background-color: $background-design;
     border-color: $background-design;
     color: white;
+  }
+
+  @media #{$mobile} {
+    margin: 5px;
   }
 }
 
