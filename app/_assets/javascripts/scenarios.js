@@ -49,7 +49,7 @@ var app = new Vue({
           title: 'Send API Requests.',
           message: 'Save requests for later, share them with the team, and send them with a single click.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/invoke-lambda-functions.png')`,
           },
         }],
       }, {
@@ -58,7 +58,7 @@ var app = new Vue({
           title: 'Property assertions.',
           message: 'Make sure your web services and lambda functions return what they are supposed to.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/contract-testing-with-json-schema.png')`,
           },
         }],
       }, {
@@ -67,7 +67,7 @@ var app = new Vue({
           title: 'Run one step, or the entire scenario.',
           message: 'Capture and use variables to pass data between steps.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/environments.png')`,
           },
         }],
       }, {
@@ -76,13 +76,13 @@ var app = new Vue({
           title: 'Share Scenarios',
           message: 'Generate simple URLs to share them with the team, customers, or even the general public.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/run-button.png')`,
           },
         }, {
           title: 'Deploy Scenarios',
           message: 'Deployed scenarios can be triggered with a simple GET request.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/run-scenarios-from-the-command-line.png')`,
           },
         }],
       }
@@ -93,7 +93,7 @@ var app = new Vue({
           title: 'Invoke Lambda Functions.',
           message: 'Quick and easy lambda function debugging, without needing to expose them via an API.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/send-api-requests.png')`,
           },
         }],
       }, {
@@ -101,7 +101,7 @@ var app = new Vue({
           title: 'Contract Testing With JSON Schema',
           message: 'Define a JSON schema to add a contract test to your request, or link it to your existing API specification.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/property-assertions.png')`,
           },
         }],
       }, {
@@ -109,7 +109,7 @@ var app = new Vue({
           title: 'Environments',
           message: 'Use environments to quickly change out the variables being used.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/run-one-step-or-the-entire-scenario.png')`,
           },
         }],
       }, {
@@ -117,13 +117,13 @@ var app = new Vue({
           title: 'Run Button',
           message: 'Embed run buttons into your existing documentation, so that your customers can try your API - no software install or signup required.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/share-scenarios.png')`,
           },
         }, {
           title: 'Run Scenarios From The Command Line',
           message: 'Run scenarios directly from your terminal, with a single command. Integrates easily into your existing continuous integration process.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/deploy-scenarios.png')`,
           },
         }],
       }
@@ -134,72 +134,42 @@ var app = new Vue({
         features: [{
           title: 'Send API Requests.',
           message: 'Save requests for later, share them with the team, and send them with a single click.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }, {
           title: 'Invoke Lambda Functions.',
           message: 'Quick and easy lambda function debugging, without needing to expose them via an API.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }],
       }, {
         title: 'Test with assertions, JSON Schema, and scripts.',
         features: [{
           title: 'Property assertions.',
           message: 'Make sure your web services and lambda functions return what they are supposed to.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }, {
           title: 'Contract Testing With JSON Schema',
           message: 'Define a JSON schema to add a contract test to your request, or link it to your existing API specification.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }],
       }, {
         title: 'Add steps to chain together more complex scenarios.',
         features: [{
           title: 'Run one step, or the entire scenario.',
           message: 'Capture and use variables to pass data between steps.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }, {
           title: 'Environments',
           message: 'Use environments to quickly change out the variables being used.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }],
       }, {
         title: 'One click deploy & share Scenarios.',
         features: [{
           title: 'Share Scenarios',
           message: 'Generate simple URLs to share them with the team, customers, or even the general public.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }, {
           title: 'Deploy Scenarios',
           message: 'Deployed scenarios can be triggered with a simple GET request.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }, {
           title: 'Run Button',
           message: 'Embed run buttons into your existing documentation, so that your customers can try your API - no software install or signup required.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }, {
           title: 'Run Scenarios From The Command Line',
           message: 'Run scenarios directly from your terminal, with a single command. Integrates easily into your existing continuous integration process.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
         }],
       }
     ],
