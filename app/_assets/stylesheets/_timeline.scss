@@ -84,8 +84,8 @@ $borderColor: purple;
 }
 
 .timeline-feature-info, .timeline-image {
-  height: 350px;
-  width: 350px;
+  height: 375px;
+  width: 375px;
   position: relative;
 
   @media #{$mobile} {
