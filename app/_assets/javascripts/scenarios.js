@@ -1,40 +1,4 @@
-Vue.component('timeline-left', {
-  template: `
-    <div>
-      <div class='timeline-title'>{{info.title}} <div class='timeline-title-dot'></div></div>
-      <div class='timeline-feature' v-for='feature in info.features'>
-        <div class='timeline-feature-info f fd-c jc-c ml-a'>
-          <div class='timeline-feature-title'>{{feature.title}}</div>
-          <div class='timeline-feature-message'>{{feature.message}}</div>
-          <div class='timeline-info-dot-right'>
-            <i class='fa fa-caret-right'></i>
-          </div>
-        </div>
-        <div class='timeline-image ml-a' :style='feature.style'></div>
-      </div>
-    </div>`,
-  props: ['info'],
-});
-
-Vue.component('timeline-right', {
-  template: `
-    <div>
-      <div class='timeline-title'></div>
-      <div class='timeline-feature' v-for='feature in info.features'>
-        <div class='timeline-image mr-a' :style='feature.style'></div>
-        <div class='timeline-feature-info f fd-c jc-c mr-a'>
-          <div class='timeline-feature-title'>{{feature.title}}</div>
-          <div class='timeline-feature-message'>{{feature.message}}</div>
-          <div class='timeline-info-dot-left'>
-            <i class='fa fa-caret-left'></i>
-          </div>
-        </div>
-      </div>
-    </div>`,
-  props: ['info'],
-});
-
-var app = new Vue({
+new Vue({
   el: '#scenarios',
 
   // this is required if we need to use {{foo}} directly in the .html page
@@ -128,52 +92,16 @@ var app = new Vue({
         }],
       }
     ],
-    mobile: [
-      {
-        title: 'Debug with simple one step Scenarios.',
-        features: [{
-          title: 'Send API Requests.',
-          message: 'Save requests for later, share them with the team, and send them with a single click.',
-        }, {
-          title: 'Invoke Lambda Functions.',
-          message: 'Quick and easy lambda function debugging, without needing to expose them via an API.',
-        }],
-      }, {
-        title: 'Test with assertions, JSON Schema, and scripts.',
-        features: [{
-          title: 'Property assertions.',
-          message: 'Make sure your web services and lambda functions return what they are supposed to.',
-        }, {
-          title: 'Contract Testing With JSON Schema',
-          message: 'Define a JSON schema to add a contract test to your request, or link it to your existing API specification.',
-        }],
-      }, {
-        title: 'Add steps to chain together more complex scenarios.',
-        features: [{
-          title: 'Run one step, or the entire scenario.',
-          message: 'Capture and use variables to pass data between steps.',
-        }, {
-          title: 'Environments',
-          message: 'Use environments to quickly change out the variables being used.',
-        }],
-      }, {
-        title: 'One click deploy & share Scenarios.',
-        features: [{
-          title: 'Share Scenarios',
-          message: 'Generate simple URLs to share them with the team, customers, or even the general public.',
-        }, {
-          title: 'Deploy Scenarios',
-          message: 'Deployed scenarios can be triggered with a simple GET request.',
-        }, {
-          title: 'Run Button',
-          message: 'Embed run buttons into your existing documentation, so that your customers can try your API - no software install or signup required.',
-        }, {
-          title: 'Run Scenarios From The Command Line',
-          message: 'Run scenarios directly from your terminal, with a single command. Integrates easily into your existing continuous integration process.',
-        }],
+  },
+
+  computed: {
+    mobile() {
+      const combined = _.cloneDeep(this.left);
+      for (const i in combined) {
+        combined[i].features = combined[i].features.concat(this.right[i].features);
       }
-    ],
-    betaEmail: '',
+      return combined;
+    },
   },
 
   methods: {

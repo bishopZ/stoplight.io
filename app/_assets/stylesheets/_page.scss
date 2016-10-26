@@ -162,7 +162,7 @@
 .callout-bar {
   text-align: center;
   background-color: #F9F9FA;
-  box-shadow: 0 0 6px rgba(#000, .5);
+  box-shadow: 0 0 3px rgba(#000, .5);
   padding: 20px 0;
   position: relative;
   z-index: 10;
@@ -401,16 +401,16 @@ blockquote {
     margin-top: -3px;
   }
   &.block-one {
-    animation-delay: 1s;
+    animation-delay: 0.75s;
   }
   &.block-two {
-    animation-delay: 1.25s;
+    animation-delay: 1s;
   }
   &.block-three {
-    animation-delay: 1.5s;
+    animation-delay: 1.25s;
   }
   &.block-four {
-    animation-delay: 1.75s;
+    animation-delay: 1.5s;
   }
 }
 
@@ -616,6 +616,14 @@ blockquote {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 0;
+  position: relative;
+  bottom: -20px;
+  opacity: 0;
+
+  animation-name: blockIntro;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.25s;
 
   @media #{$mobile} {
     width: 100%;

@@ -69,7 +69,7 @@
         &:hover,
         &:focus {
           background: transparent;
-          color: lighten($navbar-active-link-color, 25%);
+          text-decoration: underline;
         }
       }
     }
