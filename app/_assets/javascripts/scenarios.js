@@ -207,11 +207,12 @@ var app = new Vue({
   },
 
   methods: {
-    addToBeta: function (email, event) {
+    addToBeta: function(email, event) {
       event.preventDefault();
 
       var buttons = document.getElementsByClassName('register-beta-button') || [];
       var inputs = document.getElementsByClassName('register-beta-input') || [];
+      var messages = document.getElementsByClassName('register-beta-error') || [];
 
       for (var el of buttons) {
         el.setAttribute('disabled', 'disabled');
@@ -221,10 +222,39 @@ var app = new Vue({
         el.setAttribute('disabled', 'disabled');
       };
 
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', `https://api.stoplight.io/beta/email`, true);
+      var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+      xhr.open('POST', `https://api.stoplight.io/beta-request`, true);
       xhr.setRequestHeader('Content-type', 'application/json');
-      xhr.send(JSON.stringify({email}));
+
+      xhr.onload = function() {
+        if (xhr.status !== 200) {
+          var error = {};
+          try {
+            error = JSON.parse(xhr.responseText);
+
+            for (var el of messages) {
+              el.textContent = error.message;
+            }
+
+            for (var el of buttons) {
+              el.removeAttribute('disabled');
+            };
+
+            for (var el of inputs) {
+              el.removeAttribute('disabled');
+            };
+          } catch (e) {}
+        } else {
+          for (var el of messages) {
+            el.textContent = '';
+          }
+          for (var el of buttons) {
+            el.textContent = 'Success!';
+          };
+        }
+      };
+
+      xhr.send(JSON.stringify({email, feature: 'scenarios'}));
     }
   },
 });
