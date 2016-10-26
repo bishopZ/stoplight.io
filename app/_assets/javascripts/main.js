@@ -107,7 +107,7 @@
       return;
     }
 
-    e.preventDefault();
+    e.preventDefault(e);
 
     $('html, body').animate({
       scrollTop: hash === '#top' ? 0 : $el.offset().top - navbarHeight
