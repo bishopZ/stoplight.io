@@ -62,6 +62,10 @@
     line-height: 1;
     font-size: 22px;
     opacity: 0.8;
+    a {
+      text-decoration: underline;
+      color: white;
+    }
   }
 
   h3 {
@@ -636,4 +640,10 @@ blockquote {
   display: inline;
   border-bottom: 1px solid #ddd;
   padding-bottom: 3px;
+}
+
+.terms {
+  .container {
+    max-width: 1000px;
+  }
 }

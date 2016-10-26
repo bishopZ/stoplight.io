@@ -170,7 +170,6 @@
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  padding: 0 5px;
   white-space: nowrap;
   transition: all 0.25s;
   margin-top: -10px;
@@ -179,6 +178,7 @@
   background-color: white;
   display: inline-block;
   border-radius: 2px;
+  padding: 0 5px;
 }
 .dropdown-block-menu-block {
   padding: 18px 20px 15px 20px;

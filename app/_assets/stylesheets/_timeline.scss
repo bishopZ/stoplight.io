@@ -28,7 +28,8 @@ $borderSize: 2px;
       color: $background-design;
     }
     .timeline-left,
-    .timeline-title-dot {
+    .timeline-title-dot,
+    .timeline-bottom-button {
       border-color: $background-design;
     }
   }
@@ -41,7 +42,8 @@ $borderSize: 2px;
       color: $background-docs;
     }
     .timeline-left,
-    .timeline-title-dot {
+    .timeline-title-dot,
+    .timeline-bottom-button {
       border-color: $background-docs;
     }
   }

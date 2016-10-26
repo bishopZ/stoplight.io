@@ -1,7 +1,13 @@
 <section class='page-section' id='download'>
     <div class='container'>
       <h3>Get Started Today</h3>
-      <div class='section-tagline'>Stoplight is <span class='td-u'>free</span> for individuals.</div>
+      <div class='section-tagline'>
+        {% if include.tagline %}
+          {{include.tagline}}
+        {% else %}
+          Stoplight is <span class='td-u'>free</span> for individuals.
+        {% endif %}
+      </div>
       <div class='app-blocks'>
         <a class='app-block' href='https://app.stoplight.io/register'>
           <div class='app-block-inner'>
