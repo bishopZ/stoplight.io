@@ -6,6 +6,7 @@ new Vue({
   delimiters: ['${', '}'],
 
   data: {
+    betaEmail: '',
     left: [
       {
         title: 'Debug with simple one step Scenarios.',
@@ -39,11 +40,13 @@ new Vue({
         features: [{
           title: 'Share Scenarios',
           message: 'Generate simple URLs to share them with the team, customers, or even the general public.',
-          html: `<div style='display: inline-block;'>
-  <a href='https://app.stoplight.io/scenarios/share/XJtQcjiz8AJwWHbb9?__alias=production'>
-    <img width='215' src='https://cdn.stoplight.io/run-buttons/solid-blue.png' alt='Run in Stoplight' style='display: block;' />
-  </a>
-</div>`,
+          html: `
+            <div style='display: inline-block;'>
+              <a href='https://app.stoplight.io/scenarios/share/XJtQcjiz8AJwWHbb9?__alias=production'>
+                <img width='215' src='https://cdn.stoplight.io/run-buttons/solid-blue.png' alt='Run in Stoplight' style='display: block;' />
+              </a>
+            </div>
+          `,
         }, {
           title: 'Deploy Scenarios',
           message: 'Deployed scenarios can be triggered with a simple GET request.',
@@ -108,7 +111,7 @@ new Vue({
 
   methods: {
     addToBeta: function(email, event) {
-      event.preventDefault();
+      event.preventDefault(event);
 
       var buttons = document.getElementsByClassName('register-beta-button') || [];
       var inputs = document.getElementsByClassName('register-beta-input') || [];
