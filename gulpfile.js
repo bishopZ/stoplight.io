@@ -52,8 +52,7 @@ gulp.task('javascripts', function () {
     .pipe($.concat('app.js'))
     .pipe(gulp.dest(paths.dist + 'assets/js/'))
     .pipe(babel({
-      presets: ['es2015'],
-      strict: false,
+      presets: ['es2015-without-strict'],
     }))
     .pipe($.uglify())
     .pipe(gulp.dest(paths.dist + 'assets/js/'))
