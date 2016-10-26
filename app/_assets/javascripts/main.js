@@ -123,7 +123,7 @@
   });
 
   $('.section-menu a').on('click', function (e) {
-    e.preventDefault();
+    e.preventDefault(e);
     $(this).tab('show');
     $('#platform-dropdown').html($(this).text() + ' <span class="caret"></span>');
   });
