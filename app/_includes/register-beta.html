@@ -1,11 +1,31 @@
 <section class='page-section register-beta'>
   <div class='container ta-c'>
-    <h3>Register For The Beta</h3>
-    <div class='register-beta-form'>
-      <input class='register-beta-input' type='email' placeholder='email@whatever.com' v-model='betaEmail' />
-      <button class='btn register-beta-button' v-on:click='addToBeta(betaEmail, $event)'>Let Me In!</button>
+    <div v-if='submitted'>
+      <h3>Success!</h3>
+      <div class='register-beta-form'>
+        <i class='fa fa-star'></i> We're inviting on a first come first serve basis, and yes we're doing that Twitter thing.
+        If you want to jump the line, <a href='https://twitter.com/home?status=Just%20signed%20up%20for%20%40stoplightio%20%23scenarios!%20Looking%20forward%20to%20%7B...what%20are%20you%20looking%20forward%20to?%20%3A)%7D' target='_blank'>share</a> this page with a note about how you want to use Scenarios, and mention <a href='https://twitter.com/stoplightio'>@stoplightio</a>. We're excited to share this with you! <i class='fa fa-smile-o'></i>
+      </div>
     </div>
-    <div class='register-beta-error'></div>
-    <div class='sub-text'>We hate spam just as much as you, and will respect your email.</div>
+    <div v-else>
+      <h3>Register For The Beta</h3>
+
+      <div class='register-beta-form'>
+        <input
+          class='register-beta-input'
+          type='email'
+          placeholder='me@myco.com'
+          v-model='betaEmail'
+          :disabled='submitting'
+        />
+
+        <button class='btn register-beta-button' @click='addToBeta' :disabled='submitting'>
+          <span v-if='submitting'>Working...</span>
+          <span v-else>Let Me In!</span>
+        </button>
+      </div>
+      <div class='register-beta-error' v-if='error'>${error}</div>
+      <div class='sub-text'>We hate spam just as much as you, and will respect your email.</div>
+    </div>
   </div>
 </section>

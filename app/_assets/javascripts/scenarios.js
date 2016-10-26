@@ -7,6 +7,9 @@ new Vue({
 
   data: {
     betaEmail: '',
+    submitting: false,
+    submitted: false,
+    error: null,
     left: [
       {
         title: 'Debug with simple one step Scenarios.',
@@ -110,20 +113,18 @@ new Vue({
   },
 
   methods: {
-    addToBeta: function(email, event) {
+    addToBeta: function(event) {
       event.preventDefault(event);
+      var vm = this;
+      var email = vm.betaEmail;
 
-      var buttons = document.getElementsByClassName('register-beta-button') || [];
-      var inputs = document.getElementsByClassName('register-beta-input') || [];
-      var messages = document.getElementsByClassName('register-beta-error') || [];
+      if (!email.match(/^\S+@\S+$/)) {
+        alert('Please enter a valid email.');
+        return;
+      }
 
-      for (var el of buttons) {
-        el.setAttribute('disabled', 'disabled');
-      };
-
-      for (var el of inputs) {
-        el.setAttribute('disabled', 'disabled');
-      };
+      vm.submitting = true;
+      vm.error = null;
 
       var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
       xhr.open('POST', `https://api.stoplight.io/beta-request`, true);
@@ -131,29 +132,13 @@ new Vue({
 
       xhr.onload = function() {
         if (xhr.status !== 200) {
-          var error = {};
+          vm.submitting = false;
           try {
             error = JSON.parse(xhr.responseText);
-
-            for (var el of messages) {
-              el.textContent = error.message;
-            }
-
-            for (var el of buttons) {
-              el.removeAttribute('disabled');
-            };
-
-            for (var el of inputs) {
-              el.removeAttribute('disabled');
-            };
+            vm.error = error;
           } catch (e) {}
         } else {
-          for (var el of messages) {
-            el.textContent = '';
-          }
-          for (var el of buttons) {
-            el.textContent = 'Success!';
-          };
+          vm.submitted = true;
         }
       };
 
