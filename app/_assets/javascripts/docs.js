@@ -13,7 +13,7 @@ new Vue({
           title: 'Pick a layout',
           message: 'Choose between a large or constrained layout.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/theming.png')`,
           },
         }],
       }, {
@@ -22,7 +22,7 @@ new Vue({
           title: 'Choose a title, logo, and favicon',
           message: 'Enhance your docs with a gif as a logo.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/mocking.png')`,
           },
         }],
       }, {
@@ -31,13 +31,13 @@ new Vue({
           title: 'Basic Authentication',
           message: 'Protect your docs with a username and password.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/custom-integrations.png')`,
           },
         },{
           title: 'Custom Javascript',
           message: 'Add some extra Javascript to your docs.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/custom-variables.png')`,
           },
         }],
       }, {
@@ -46,13 +46,7 @@ new Vue({
           title: 'Preview',
           message: 'View your docs before publishing.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
-        }, {
-          title: 'Custom Domain',
-          message: 'See your docs at any domain with SSL included',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/implement-it.png')`,
           },
         }],
       }
@@ -63,7 +57,7 @@ new Vue({
           title: 'Add some custom theming.',
           message: 'Pick three colors and we will generate the rest, or tackle some custom CSS.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/layout.png')`,
           },
         }],
       }, {
@@ -71,7 +65,7 @@ new Vue({
           title: 'Mocking',
           message: 'Enable mocked responses in the Try it out section.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/basic-options.png')`,
           },
         }],
       }, {
@@ -79,27 +73,21 @@ new Vue({
           title: 'Enable some integrations',
           message: 'Turn on Segment, Intercom, or Google Analytics.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/basic-auth.png')`,
           },
         }, {
           title: 'Custom Variables',
           message: 'Request user input variables such an API key to be used across your docs.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/custom-javascript.png')`,
           },
         }],
       }, {
         features: [{
-          title: 'Use our domain',
-          message: 'Pick a subdomain and base path where your docs will be hosted',
+          title: 'Implement it',
+          message: 'Host on our domain, your own custom domain, or embed to another website.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
-        }, {
-          title: 'Embedded Your Docs',
-          message: 'Embed your docs on another website.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/docs/preview.png')`,
           },
         }],
       }
