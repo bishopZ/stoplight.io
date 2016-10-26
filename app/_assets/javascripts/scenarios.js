@@ -39,9 +39,11 @@ new Vue({
         features: [{
           title: 'Share Scenarios',
           message: 'Generate simple URLs to share them with the team, customers, or even the general public.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios/run-button.png')`,
-          },
+          html: `<div style='display: inline-block;'>
+  <a href='https://app.stoplight.io/scenarios/share/XJtQcjiz8AJwWHbb9?__alias=production'>
+    <img width='215' src='https://cdn.stoplight.io/run-buttons/solid-blue.png' alt='Run in Stoplight' style='display: block;' />
+  </a>
+</div>`,
         }, {
           title: 'Deploy Scenarios',
           message: 'Deployed scenarios can be triggered with a simple GET request.',

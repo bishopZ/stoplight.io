@@ -108,7 +108,9 @@
 .navbar-flat.affix {
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(#000, .15);
-
+}
+.navbar-flat.affix,
+.navbar-flat.light {
   .dropdown-block-menu-inner {
     border: 1px solid #ccc;
     .dropdown-block-menu-caret {

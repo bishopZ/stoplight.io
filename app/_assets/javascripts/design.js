@@ -13,13 +13,13 @@ new Vue({
           title: 'Automatic API Discovery.',
           message: 'Send HTTP traffic through Prism, and Stoplight will map out your API specification.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/import.png')`,
           },
         }, {
           title: 'Start From Scratch.',
           message: 'Don\'t have an API yet? No problem! Design first is the way to go.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/programatic.png')`,
           },
         }],
       }, {
@@ -28,13 +28,7 @@ new Vue({
           title: 'Describe Endpoints',
           message: 'Headers, bodies, multiple responses, query string params, you name it.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
-        }, {
-          title: 'CRUD Builder',
-          message: 'Quickly create all of the endpoints for a resource, and the corresponding models.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/models.png')`,
           },
         }],
       }, {
@@ -43,7 +37,7 @@ new Vue({
           title: 'Flexible Mocking',
           message: 'Mock the entire API, or just particular endpoints.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/dynamic.png')`,
           },
         }],
       }, {
@@ -52,7 +46,7 @@ new Vue({
           title: 'Invite Teammates',
           message: 'Invite teammates to view and collaborate on your API designs privately.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/export.png')`,
           },
         }],
       }
@@ -63,13 +57,13 @@ new Vue({
           title: 'OAS & RAML Import',
           message: 'Already have a specification file? Import it with a click.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/discovery.png')`,
           },
         }, {
           title: 'Programatic Access',
           message: 'Already generate a specification file from code? Build processes around our API to automatically import.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/scratch.png')`,
           },
         }],
       }, {
@@ -77,13 +71,7 @@ new Vue({
           title: 'Create Models',
           message: 'Build up complex models quickly with our JSON Schema editor, and then reference them.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
-          },
-        }, {
-          title: 'Shared Models',
-          message: 'Create a repository of models, and share them amongst your APIs.',
-          style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/endpoints.png')`,
           },
         }],
       }, {
@@ -91,7 +79,7 @@ new Vue({
           title: 'Dynamic Mocking',
           message: 'Define response schemas for your endpoints, and Stoplight will generate example data.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/mocking.png')`,
           },
         }],
       }, {
@@ -99,7 +87,7 @@ new Vue({
           title: 'One Click Export',
           message: 'Export to OAS or RAML using our API.',
           style: {
-            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/scenarios-hero.png')`,
+            backgroundImage: `url('https://cdn.stoplight.io/stoplightio/design/team.png')`,
           },
         }],
       }

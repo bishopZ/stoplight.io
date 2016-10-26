@@ -3,6 +3,7 @@ $borderSize: 2px;
 .timeline {
   border-top: $borderSize solid;
   border-bottom: $borderSize solid;
+  position: relative;
 
   &.scenarios {
     border-color: $background-scenarios;
@@ -13,7 +14,8 @@ $borderSize: 2px;
       color: $background-scenarios;
     }
     .timeline-left,
-    .timeline-title-dot {
+    .timeline-title-dot,
+    .timeline-bottom-button {
       border-color: $background-scenarios;
     }
   }
@@ -56,7 +58,7 @@ $borderSize: 2px;
 
 .timeline-left, .timeline-right {
   width: 50%;
-  padding-bottom: 75px;
+  padding-bottom: 125px;
 
   @media #{$mobile} {
     width: 100%;
@@ -172,4 +174,18 @@ $borderSize: 2px;
 
 .timeline-info-dot-left {
   left: -64.5px;
+}
+
+.timeline-bottom-button {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  margin-left: -100px;
+  background-color: white;
+  border: 2px solid;
+  font-size: 20px;
 }
