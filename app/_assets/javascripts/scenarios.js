@@ -128,7 +128,6 @@ var app = new Vue({
         }],
       }
     ],
-
     mobile: [
       {
         title: 'Debug with simple one step Scenarios.',
@@ -204,10 +203,11 @@ var app = new Vue({
         }],
       }
     ],
+    betaEmail: '',
   },
 
   methods: {
-    addToBeta: function (event) {
+    addToBeta: function (email, event) {
       event.preventDefault();
 
       var buttons = document.getElementsByClassName('register-beta-button') || [];
@@ -220,6 +220,11 @@ var app = new Vue({
       for (var el of inputs) {
         el.setAttribute('disabled', 'disabled');
       };
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', `https://api.stoplight.io/beta/email`, true);
+      xhr.setRequestHeader('Content-type', 'application/json');
+      xhr.send(JSON.stringify({email}));
     }
   },
 });
