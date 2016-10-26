@@ -96,8 +96,8 @@ new Vue({
 
   computed: {
     mobile() {
-      const combined = _.cloneDeep(this.left);
-      for (const i in combined) {
+      var combined = _.cloneDeep(this.left);
+      for (var i in combined) {
         combined[i].features = combined[i].features.concat(this.right[i].features);
       }
       return combined;
