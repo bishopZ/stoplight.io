@@ -1,0 +1,65 @@
+---
+title: Hosted Docs
+layout: default
+excerpt: The perfect OAS (Swagger) companion. Supercharge any OAS file with mocking, transformations, validations, and more.
+image: https://stoplight.io/assets/img/prism.png
+---
+
+<div id='docs' class="page">
+  <div class="page-hero background-docs">
+    <div class="container">
+      <div class='page-hero-title'>
+        <h1>Stoplight Hosted Docs</h1>
+        <h2>Because your customers deserve beautiful + functional technical documentation.</h2>
+        <h2>Check out our <a href='https://help.stoplight.io'>help portal</a>, which is 100% powered by this Hosted Docs product.</h2>
+      </div>
+
+      <div class='page-image' style='background-image: url("https://cdn.stoplight.io/stoplightio/docs/docs-hero.png")'></div>
+    </div>
+  </div>
+
+  <div class='callout-bar'>
+    <ul>
+      <li>Custom Themes</li>
+      <li class='divider'></li>
+      <li>API Playground</li>
+      <li class='divider'></li>
+      <li>Basic Auth</li>
+      <li class='divider'></li>
+      <li>Integrations</li>
+      <li class='divider'></li>
+      <li>Domains + Embedding</li>
+    </ul>
+  </div>
+
+  {% include download.html tagline="Free core platform. Hosted Docs start at $39 / month." %}
+
+  <div class='timeline docs'>
+    <div class='timeline-content f jc-c hidden-xs'>
+      <div class='f-1 timeline-left'>
+        <timeline-left class='timeline-left-block ta-r' v-for='info in left' :info='info'></timeline-left>
+      </div>
+      <div class='f-1 timeline-right'>
+        <timeline-right class='timeline-right-block ta-l' v-for='info in right' :info='info'></timeline-right>
+      </div>
+    </div>
+
+    <div class='timeline-content visible-xs'>
+      <div class='timeline-block' v-for='info in mobile'>
+        <div class='timeline-title'>${info.title}</div>
+        <div class='f fw-w'>
+          <div class='timeline-feature f-1' v-for='feature in info.features'>
+            <div class='timeline-feature-info'>
+              <div class='timeline-feature-title'>${feature.title}</div>
+              <div class='timeline-feature-message'>${feature.message}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class='timeline-bottom-button' href='https://help.stoplight.io/docs/hosted-documentation/documentation-introduction'>Read The Docs</a>
+  </div>
+
+  {% include download.html tagline="Free core platform. Hosted Docs start at $39 / month." %}
+</div>

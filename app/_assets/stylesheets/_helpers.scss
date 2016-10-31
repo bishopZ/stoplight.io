@@ -17,3 +17,185 @@
 .ai-c {
   align-items: center;
 }
+
+.d-n {
+  display: none !important;
+}
+
+.fd-c {
+  flex-direction: column;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.fw-w {
+  flex-wrap: wrap;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.td-u {
+  text-decoration: underline;
+}
+
+.m-a {
+  margin: auto !important;
+}
+
+.ml-a {
+  margin-left: auto;
+}
+
+.mr-a {
+  margin-right: auto;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.sub-text {
+  color: rgba(102, 102, 102, 0.40);
+  font-size: 14px;
+}
+
+.mw-1000 {
+  max-width: 1000px;
+}
+
+
+/////////////
+// FLEXBOX //
+/////////////
+
+.f {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: none;
+  flex: none;
+}
+.f.h-100 {
+  min-height: 1px;
+}
+.f-0 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.f-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+}
+.f-15 {
+  -webkit-box-flex: 1.5;
+  -webkit-flex: 1.5;
+  -ms-flex: 1.5;
+  flex: 1.5;
+}
+.f-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+.fd-r {
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.fw-n {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.fs-1 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+}
+.fw-w {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.ai-s {
+  align-items: stretch;
+}
+.ai-c {
+  align-items: center;
+}
+.ai-b {
+  align-items: baseline;
+}
+.ai-fe {
+  align-items: flex-end;
+}
+.jc-c {
+  justify-content: center;
+}
+.jc-fe {
+  justify-content: flex-end;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-sa {
+  justify-content: space-around;
+}
+.f-pr {
+  margin-left: auto;
+}
+.f-pl {
+  margin-right: auto;
+}

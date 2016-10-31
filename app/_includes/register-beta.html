@@ -1,0 +1,54 @@
+<section class='page-section register-beta'>
+  <div class='container ta-c'>
+    <div class='register-beta-success' v-if='submitted'>
+      <h5>Thanks for signing up for Stoplight Scenarios!</h5>
+
+      <h3>Want your choice of a kickass Stoplight T-Shirt, or 6 months of free Stoplight Hosted Docs?</h3>
+
+      <br />
+
+      <div>
+        <i>Get 5 of your friends to sign up with this unique URL:</i>
+        <br />
+        <div class='register-beta_url'>${_.get(referralData, "url")}</div>
+      </div>
+
+      <div>
+        <a
+          :href='"https://twitter.com/home?status=Just%20signed%20up%20for%20%40Stoplightio%20%23Scenarios beta!%20Check%20it%20out%20"+_.get(referralData, "url")'
+          target='_blank'
+          class='register-beta_button twitter'
+        >
+          <i class='fa fa-twitter'></i> Share
+        </a>
+        <a
+          :href='"mailto:someone@example.com?Subject=Check%20out%20the%20Stoplight%20Scenarios%20beta!&body="+_.get(referralData, "url")'
+          target='_blank'
+          class='register-beta_button email'
+        >
+          <i class='fa fa-paper-plane'></i> Email
+        </a>
+      </div>
+    </div>
+    <div v-else>
+      <h3>Register For The Beta</h3>
+
+      <div class='register-beta-form'>
+        <input
+          class='register-beta-input'
+          type='email'
+          placeholder='me@myco.com'
+          v-model='betaEmail'
+          :disabled='submitting'
+        />
+
+        <button class='btn register-beta-button' @click='addToBeta' :disabled='submitting'>
+          <span v-if='submitting'>Working...</span>
+          <span v-else>Let Me In!</span>
+        </button>
+      </div>
+      <div class='register-beta-error' v-if='error'>${error}</div>
+      <div class='sub-text'>We hate spam just as much as you, and will respect your email.</div>
+    </div>
+  </div>
+</section>
