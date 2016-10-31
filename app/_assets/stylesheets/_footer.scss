@@ -1,8 +1,12 @@
 .site-footer {
   line-height: 1.7;
-  padding: 20px;
+  padding: 20px 100px 20px 20px;
   background-color: #1A222C;
   color: white;
+
+  @media #{$mobile} {
+    padding: 0px 0px 80px 0px;
+  }
 
   .container {
     width: 100%;
@@ -22,15 +26,19 @@
       width: 100%;
       position: absolute;
       left: 0;
-      top: 50%;
+      top: 65px;
       border-top: 1px solid rgba(255, 255, 255, 0.25);
       z-index: 0;
+
+      @media #{$mobile} {
+        top: 72px;
+      }
     }
   }
 
   .site-footer-brand {
     background-color: #1A222C;
-    margin-top: 37px;
+    margin-top: 23px;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -50,10 +58,31 @@
   .site-footer-links {
     text-align: right;
     float: right;
+
+    @media #{$mobile} {
+      float:none;
+      text-align: center;
+    }
   }
 
   ul {
-    margin: 15px 0;
+    margin: 25px 0;
+
+    @media #{$mobile} {
+      margin: 10px 0 0 0;
+    }
+
+    &:first-child {
+      @media #{$mobile} {
+        margin: 35px 0 0 0;
+      }
+    }
+
+    li {
+      @media #{$mobile} {
+        padding:0 13px;
+      }
+    }
   }
 
   a {
