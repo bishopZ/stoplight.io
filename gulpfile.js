@@ -1,4 +1,5 @@
-var browserSync = require('browser-sync').create(),
+var babel = require('gulp-babel'),
+    browserSync = require('browser-sync').create(),
     gulp = require('gulp'),
     file = require('gulp-file'),
     gutil = require('gulp-util'),
@@ -8,11 +9,7 @@ var browserSync = require('browser-sync').create(),
     sequence = require('run-sequence'),
     path = require('path'),
     // Load gulp plugins
-    $ = require('gulp-load-plugins')(),
-    // Babel Require hook to make require jsx working
-    babel = require('babel/register')({
-      only: './node_modules/StopLight'
-    })
+    $ = require('gulp-load-plugins')()
 
 var paths = {
   assets: './app/_assets/',
@@ -29,6 +26,8 @@ var sources = {
     paths.modules + 'particles.js/particles.js',
     paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
     paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/affix.js',
+    paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+    paths.modules + 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
     paths.assets + 'javascripts/**/*.js'
   ],
   images: paths.assets + 'images/**/*',
@@ -52,6 +51,10 @@ gulp.task('javascripts', function () {
     .pipe($.plumber())
     .pipe($.concat('app.js'))
     .pipe(gulp.dest(paths.dist + 'assets/js/'))
+    .pipe(babel({
+      presets: ['es2015'],
+      strict: false,
+    }))
     .pipe($.uglify())
     .pipe(gulp.dest(paths.dist + 'assets/js/'))
     .pipe(browserSync.stream())

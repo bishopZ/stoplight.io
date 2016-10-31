@@ -1,0 +1,11 @@
+<section class='page-section register-beta'>
+  <div class='container ta-c'>
+    <h3>Register For The Beta</h3>
+    <div class='register-beta-form'>
+      <input class='register-beta-input' type='email' placeholder='email@whatever.com' v-model='betaEmail' />
+      <button class='btn register-beta-button' v-on:click='addToBeta(betaEmail, $event)'>Let Me In!</button>
+    </div>
+    <div class='register-beta-error'></div>
+    <div class='sub-text'>We hate spam just as much as you, and will respect your email.</div>
+  </div>
+</section>

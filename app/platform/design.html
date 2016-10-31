@@ -1,0 +1,64 @@
+---
+title: API Designer
+layout: default
+excerpt: The perfect OAS (Swagger) companion. Supercharge any OAS file with mocking, transformations, validations, and more.
+image: https://stoplight.io/assets/img/prism.png
+---
+
+<div id="design" class="page">
+  <div class="page-hero background-design">
+    <div class="container">
+      <div class='page-hero-title'>
+        <h1>Stoplight API Designer</h1>
+        <h2>Model complex APIs faster than ever.</h2>
+      </div>
+
+      <div class='page-image' style='background-image: url("https://cdn.stoplight.io/stoplightio/design/design-hero.png")'></div>
+    </div>
+  </div>
+
+  <div class='callout-bar'>
+    <ul>
+      <li>OAS + RAML Support</li>
+      <li class='divider'></li>
+      <li>Teams & Permissions</li>
+      <li class='divider'></li>
+      <li>Complex Modeling</li>
+      <li class='divider'></li>
+      <li>API Discovery</li>
+      <li class='divider'></li>
+      <li>Instant Mock Servers</li>
+    </ul>
+  </div>
+
+  {% include download.html %}
+
+  <div class='timeline design'>
+    <div class='timeline-content f jc-c hidden-xs'>
+      <div class='f-1 timeline-left'>
+        <timeline-left class='timeline-left-block ta-r' v-for='info in left' :info='info'></timeline-left>
+      </div>
+      <div class='f-1 timeline-right'>
+        <timeline-right class='timeline-right-block ta-l' v-for='info in right' :info='info'></timeline-right>
+      </div>
+    </div>
+
+    <div class='timeline-content visible-xs'>
+      <div class='timeline-block' v-for='info in mobile'>
+        <div class='timeline-title'>${info.title}</div>
+        <div class='f fw-w'>
+          <div class='timeline-feature f-1' v-for='feature in info.features'>
+            <div class='timeline-feature-info'>
+              <div class='timeline-feature-title'>${feature.title}</div>
+              <div class='timeline-feature-message'>${feature.message}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class='timeline-bottom-button' href='https://help.stoplight.io/docs'>Read The Docs</a>
+  </div>
+
+  {% include download.html %}
+</div>
