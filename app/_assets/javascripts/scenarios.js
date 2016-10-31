@@ -10,6 +10,7 @@ new Vue({
     submitting: false,
     submitted: false,
     error: null,
+    referralData: null,
     left: [
       {
         title: 'Debug with simple one step Scenarios.',
@@ -126,23 +127,29 @@ new Vue({
       vm.submitting = true;
       vm.error = null;
 
-      var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-      xhr.open('POST', `https://api.stoplight.io/beta-request`, true);
-      xhr.setRequestHeader('Content-type', 'application/json');
+      const search = (window.location.search || '?').slice(1);
+      const parts = search.split('&');
+      let referralToken;
+      for (const k of parts) {
+        const part = k.split('=');
+        if (part[0] === 'ref') {
+          referralToken = part[1];
+        }
+      }
 
-      xhr.onload = function() {
-        if (xhr.status !== 200) {
-          vm.submitting = false;
-          try {
-            error = JSON.parse(xhr.responseText);
-            vm.error = error;
-          } catch (e) {}
+      Untorch.submitSignup({
+        email,
+        referralToken,
+      }, function (error, data) {
+        console.log(data);
+        vm.submitting = false;
+        if (error) {
+          vm.error = error;
         } else {
           vm.submitted = true;
+          vm.referralData = data;
         }
-      };
-
-      xhr.send(JSON.stringify({email, feature: 'scenarios'}));
+      });
     }
   },
 });

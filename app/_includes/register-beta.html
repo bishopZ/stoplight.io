@@ -1,10 +1,33 @@
 <section class='page-section register-beta'>
   <div class='container ta-c'>
-    <div v-if='submitted'>
-      <h3>Success!</h3>
-      <div class='register-beta-form'>
-        <i class='fa fa-star'></i> We're inviting on a first come first serve basis, and yes we're doing that Twitter thing.
-        If you want to jump the line, <a href='https://twitter.com/home?status=Just%20signed%20up%20for%20%40stoplightio%20%23scenarios!%20Looking%20forward%20to%20%7B...what%20are%20you%20looking%20forward%20to?%20%3A)%7D' target='_blank'>share</a> this page with a note about how you want to use Scenarios, and mention <a href='https://twitter.com/stoplightio'>@stoplightio</a>. We're excited to share this with you! <i class='fa fa-smile-o'></i>
+    <div class='register-beta-success' v-if='submitted'>
+      <h5>Thanks for signing up for Stoplight Scenarios!</h5>
+
+      <h3>Want your choice of a kickass Stoplight T-Shirt, or 6 months of free Stoplight Hosted Docs?</h3>
+
+      <br />
+
+      <div>
+        <i>Get 5 of your friends to sign up with this unique URL:</i>
+        <br />
+        <div class='register-beta_url'>${_.get(referralData, "url")}</div>
+      </div>
+
+      <div>
+        <a
+          :href='"https://twitter.com/home?status=Just%20signed%20up%20for%20%40Stoplightio%20%23Scenarios beta!%20Check%20it%20out%20"+_.get(referralData, "url")'
+          target='_blank'
+          class='register-beta_button twitter'
+        >
+          <i class='fa fa-twitter'></i> Share
+        </a>
+        <a
+          :href='"mailto:someone@example.com?Subject=Check%20out%20the%20Stoplight%20Scenarios%20beta!&body="+_.get(referralData, "url")'
+          target='_blank'
+          class='register-beta_button email'
+        >
+          <i class='fa fa-paper-plane'></i> Email
+        </a>
       </div>
     </div>
     <div v-else>

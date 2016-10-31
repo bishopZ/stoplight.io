@@ -34,3 +34,35 @@
   color: #e74c3c;
   font-weight: bold;
 }
+
+.register-beta-success {
+  max-width: 650px;
+  margin: auto;
+
+  h3 {
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+.register-beta_button {
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 30px 10px 0 10px;
+  cursor: pointer;
+  display: inline-block;
+
+  &.twitter {
+    background-color: #019FE9;
+  }
+
+  &.email{
+    background-color: #666;
+  }
+}
+
+.register-beta_url {
+  color: #019FE9;
+}
