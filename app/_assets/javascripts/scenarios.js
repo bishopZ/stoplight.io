@@ -141,7 +141,6 @@ new Vue({
         email,
         referralToken,
       }, function (error, data) {
-        console.log(data);
         vm.submitting = false;
         if (error) {
           vm.error = error;
@@ -150,6 +149,11 @@ new Vue({
           vm.referralData = data;
         }
       });
+
+      var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+      xhr.open('POST', `https://api.stoplight.io/beta-request`, true);
+      xhr.setRequestHeader('Content-type', 'application/json');
+      xhr.send(JSON.stringify({email, referralToken, feature: 'scenarios'}));
     }
   },
 });
