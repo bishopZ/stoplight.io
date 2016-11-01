@@ -54,13 +54,13 @@
 
   h1 {
     line-height: 1;
-    font-size: 30px;
+    font-size: calc(1.8vw + 10px);
     font-weight: bold;
   }
 
   h2 {
-    line-height: 1;
-    font-size: 22px;
+    line-height: 1.4;
+    font-size: calc(0.5vw + 10px);
     opacity: 0.8;
     a {
       text-decoration: underline;
@@ -365,10 +365,12 @@ blockquote {
 
 .platform-blocks {
   width: 100%;
-  margin: 40px 0 80px;
+  margin: 4vw 0 8vw;
 }
 
 .platform-blocks-content {
+  flex-wrap: wrap;
+  justify-content: space-around;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -384,7 +386,7 @@ blockquote {
   }
 }
 .platform-block {
-  margin: 0 10px;
+  margin: 0 10px 20px 10px;
   padding: 0 20px 0 25px;
   z-index: 50;
   border-radius: 2px;
