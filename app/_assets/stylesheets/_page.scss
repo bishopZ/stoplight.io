@@ -282,6 +282,10 @@ blockquote {
       margin: 0 auto;
       padding-top: 30px;
 
+      & > div {
+        padding-bottom: 40px;
+      }
+
       .fa {
         font-size: 75px;
         display: block;
