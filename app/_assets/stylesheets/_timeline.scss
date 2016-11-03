@@ -1,7 +1,31 @@
 $borderSize: 2px;
 
+
+.timeline-border {
+  margin: 0 auto;
+  width: 0%;
+  height: $borderSize;
+  #design & {
+    background-color: $background-design;
+  }
+  #docs & {
+    background-color: $background-docs;
+  }
+  #scenarios & {
+    background-color: $background-scenarios;
+  }
+}
+#design, #docs {
+  section#download {
+    border-bottom: 0;
+  }
+}
+#scenarios section.register-beta {
+  border-bottom: 0;
+}
+
+
 .timeline {
-  border-top: $borderSize solid;
   border-bottom: $borderSize solid;
   position: relative;
 

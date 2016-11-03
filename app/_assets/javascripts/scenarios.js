@@ -158,6 +158,21 @@ new Vue({
       };
 
       xhr.send(JSON.stringify({email, feature: 'scenarios'}));
+    },
+    handleScroll: function(){
+      var scrollTop = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scrollTop + windowHeight > 1400) {
+        var speed = $(window).width() / 1.7;
+        $('.timeline-border').animate({width: '100%'}, speed);
+        $(window).off('scroll');
+      }
     }
   },
+  created: function () {
+    var that = this;
+    setTimeout(function(){ // avoids initial scrollToTop
+      $(window).on('scroll', _.throttle(that.handleScroll, 100));
+    }, 800);
+  }
 });
